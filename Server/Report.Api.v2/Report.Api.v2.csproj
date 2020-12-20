@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Report\DDDEmployeeReport.vsrepx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Report\DDDEmployeeReport.vsrepx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Reporting.Core" Version="20.2.4" />
+    <PackageReference Include="DevExpress.Web.Reporting" Version="20.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Report\DDDEmployeeReport.cs">
+      <DependentUpon>DDDEmployeeReport.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\DDDEmployeeReport.Designer.cs">
+      <DependentUpon>DDDEmployeeReport.vsrepx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

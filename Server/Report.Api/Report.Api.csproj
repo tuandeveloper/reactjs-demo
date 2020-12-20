@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Web.Reporting" Version="17.1.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Report\DDEmployeeReport.cs">
+      <DependentUpon>DDEmployeeReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Report\DDEmployeeReport.Designer.cs">
+      <DependentUpon>DDEmployeeReport.repx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entity\" />
+    <Folder Include="Report01\" />
+  </ItemGroup>
+
+
+</Project>

@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="20.2.4.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="DDEmployeeReport" PageColor="Transparent" Landscape="true" Margins="0, 0, 0, 0" PaperKind="A2" PageWidth="2339" PageHeight="1654" Version="20.2">
+  <Extensions>
+    <Item1 Ref="1" Key="VSReportExtInfo" Value=".repx" />
+  </Extensions>
+  <CalculatedFields>
+    <Item1 Ref="2" Name="HECSCal" Expression="Iif( lower([HECS]) == 'true','Y'  ,'N' )" DataMember="Employees" />
+  </CalculatedFields>
+  <Bands>
+    <Item1 Ref="3" ControlType="DetailBand" Name="Detail" Expanded="false" HeightF="0" TextAlignment="TopLeft" Padding="0,0,0,0,100" />
+    <Item2 Ref="4" ControlType="TopMarginBand" Name="TopMargin" HeightF="0" TextAlignment="TopLeft" Padding="0,0,0,0,100" />
+    <Item3 Ref="5" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="0" TextAlignment="TopLeft" Padding="0,0,0,0,100" />
+    <Item4 Ref="6" ControlType="GroupHeaderBand" Name="GroupHeader1" RepeatEveryPage="true" HeightF="25">
+      <Controls>
+        <Item1 Ref="7" ControlType="XRTable" Name="xrTable2" SizeF="2339,25" LocationFloat="0,0" Font="Arial, 10pt, style=Bold, charSet=0">
+          <Rows>
+            <Item1 Ref="8" ControlType="XRTableRow" Name="xrTableRow2" Weight="1">
+              <Cells>
+                <Item1 Ref="9" ControlType="XRTableCell" Name="FamilyName" Weight="0.1303226814789534" Text="Family Name" WordWrap="false" />
+                <Item2 Ref="10" ControlType="XRTableCell" Name="GivenName" Weight="0.10297821631115781" Text="Given Name" WordWrap="false" />
+                <Item3 Ref="11" ControlType="XRTableCell" Name="MiddleName" Weight="0.13056754075991034" Text="Middle Name" WordWrap="false" />
+                <Item4 Ref="12" ControlType="XRTableCell" Name="Gender" Weight="0.13962006862828374" Text="Gender" WordWrap="false" />
+                <Item5 Ref="13" ControlType="XRTableCell" Name="StreetAddress1" Weight="0.10638827846359678" Text="Street" WordWrap="false" />
+                <Item6 Ref="14" ControlType="XRTableCell" Name="Suburb" Weight="0.1370416292336557" Text="Suburb" WordWrap="false" />
+                <Item7 Ref="15" ControlType="XRTableCell" Name="State" Weight="0.099821150721146945" Text="State " WordWrap="false" />
+                <Item8 Ref="16" ControlType="XRTableCell" Name="Postcode" Weight="0.17470662945167087" Text="Postcode" WordWrap="false" />
+                <Item9 Ref="17" ControlType="XRTableCell" Name="Birthdate" Weight="0.09164078842012742" Text="Birthdate" WordWrap="false" />
+                <Item10 Ref="18" ControlType="XRTableCell" Name="StartDate" Weight="0.093778506442438181" Text="Start Date" WordWrap="false" />
+                <Item11 Ref="19" ControlType="XRTableCell" Name="TerminationDate" Weight="0.14801809809302796" Text="Termination Date" WordWrap="false" />
+                <Item12 Ref="20" ControlType="XRTableCell" Name="HourlyRate" Weight="0.1248123432026309" Text="Hourly Rate" TextAlignment="TopLeft" WordWrap="false">
+                  <StylePriority Ref="21" UseTextAlignment="false" />
+                </Item12>
+                <Item13 Ref="22" ControlType="XRTableCell" Name="xrTableCell22" Weight="0.14662596011379012" Text="Payment Group" WordWrap="false" />
+                <Item14 Ref="23" ControlType="XRTableCell" Name="xrTableCell24" Weight="0.079690821559820657" Text="Cost Centre" WordWrap="false" />
+                <Item15 Ref="24" ControlType="XRTableCell" Name="xrTableCell25" Weight="0.064103354075624286" Text="Hours" WordWrap="false" />
+                <Item16 Ref="25" ControlType="XRTableCell" Name="xrTableCell26" Weight="0.091056611243450936" Text="State Employed" WordWrap="false" />
+                <Item17 Ref="26" ControlType="XRTableCell" Name="Occupation" Weight="0.14971362885405454" Text="Occupation" WordWrap="false" />
+                <Item18 Ref="27" ControlType="XRTableCell" Name="Location" Weight="0.14785449175826188" Text="Location" WordWrap="false" />
+                <Item19 Ref="28" ControlType="XRTableCell" Name="HECS" Weight="0.10099003122273406" Text="HECS" WordWrap="false" />
+                <Item20 Ref="29" ControlType="XRTableCell" Name="Paym" Weight="0.13944745576778647" Text="Personal Leave" WordWrap="false" />
+                <Item21 Ref="30" ControlType="XRTableCell" Name="Annu" Weight="0.12248146722436246" Text="Annual Leave" WordWrap="false" />
+                <Item22 Ref="31" ControlType="XRTableCell" Name="Long" Weight="0.099727859497055232" Text="Long Service Leave" WordWrap="false" />
+                <Item23 Ref="32" ControlType="XRTableCell" Name="RDO" Weight="0.086642646633166454" Text="RDO" WordWrap="false" />
+                <Item24 Ref="33" ControlType="XRTableCell" Name="EmployeeCode" Weight="0.172797315636587" Text="Employee Code" WordWrap="false" />
+                <Item25 Ref="34" ControlType="XRTableCell" Name="Status" Weight="0.11918043524338445" Text="Status" WordWrap="false" />
+                <Item26 Ref="35" ControlType="XRTableCell" Name="xrTableCell1" Weight="0.11017042679585767" Text="Email">
+                  <ExpressionBindings>
+                    <Item1 Ref="36" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Employees.ShowEmergencyContactDetails] = False, False, ?)" />
+                  </ExpressionBindings>
+                </Item26>
+                <Item27 Ref="37" ControlType="XRTableCell" Name="xrTableCell4" Weight="0.22337374267712848" Text="HomePhone">
+                  <ExpressionBindings>
+                    <Item1 Ref="38" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Employees.ShowEmergencyContactDetails] = False, False, ?)" />
+                  </ExpressionBindings>
+                </Item27>
+                <Item28 Ref="39" ControlType="XRTableCell" Name="xrTableCell3" Weight="0.23145970403458321" Text="MobilePhone">
+                  <ExpressionBindings>
+                    <Item1 Ref="40" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Employees.ShowEmergencyContactDetails] = False, False, ?)" />
+                  </ExpressionBindings>
+                </Item28>
+                <Item29 Ref="41" ControlType="XRTableCell" Name="xrTableCell5" Weight="0.29884292591861616" Text="EmergencyName">
+                  <ExpressionBindings>
+                    <Item1 Ref="42" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Employees.ShowEmergencyContactDetails] = False, False, ?)" />
+                  </ExpressionBindings>
+                </Item29>
+                <Item30 Ref="43" ControlType="XRTableCell" Name="xrTableCell2" Weight="0.33388147324593331" Text="NextOfKinRelation">
+                  <ExpressionBindings>
+                    <Item1 Ref="44" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Employees.ShowEmergencyContactDetails] = False, False, ?)" />
+                  </ExpressionBindings>
+                </Item30>
+                <Item31 Ref="45" ControlType="XRTableCell" Name="xrTableCell7" Weight="0.32040527896658511" Text="EmergencyPhone">
+                  <ExpressionBindings>
+                    <Item1 Ref="46" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Employees.ShowEmergencyContactDetails] = False, False, ?)" />
+                  </ExpressionBindings>
+                </Item31>
+                <Item32 Ref="47" ControlType="XRTableCell" Name="xrTableCell6" Weight="0.33388198651496481" Text="EmergencyMobile">
+                  <ExpressionBindings>
+                    <Item1 Ref="48" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Employees.ShowEmergencyContactDetails] = False, False, ?)" />
+                  </ExpressionBindings>
+                </Item32>
+                <Item33 Ref="49" ControlType="XRTableCell" Name="xrTableCell8" Weight="0.36504728340852216" Text="EmergencyAddress1">
+                  <ExpressionBindings>
+                    <Item1 Ref="50" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Employees.ShowEmergencyContactDetails] = False, False, ?)" />
+                  </ExpressionBindings>
+                </Item33>
+                <Item34 Ref="51" ControlType="XRTableCell" Name="xrTableCell9" Weight="0.20408586643497206" Text="EmergencyAddress2">
+                  <ExpressionBindings>
+                    <Item1 Ref="52" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Employees.ShowEmergencyContactDetails] = False, False, ?)" />
+                  </ExpressionBindings>
+                </Item34>
+                <Item35 Ref="53" ControlType="XRTableCell" Name="xrTableCell10" Weight="0.19143764816370706" Text="EmergencyAddress3">
+                  <ExpressionBindings>
+                    <Item1 Ref="54" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([Employees.ShowEmergencyContactDetails] = False, False, ?)" />
+                  </ExpressionBindings>
+                </Item35>
+                <Item36 Ref="55" ControlType="XRTableCell" Name="xrTableCell21" Weight="0.15453186758210227" Text="Department" />
+                <Item37 Ref="56" ControlType="XRTableCell" Name="xrTableCell54" Weight="0.28505380608628322" Text="Last Login Date" />
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="57" UseFont="false" UseBorders="false" />
+        </Item1>
+      </Controls>
+    </Item4>
+    <Item5 Ref="58" ControlType="DetailReportBand" Name="DetailReport2" Level="0" DataMember="Employees">
+      <Bands>
+        <Item1 Ref="59" ControlType="DetailBand" Name="Detail3" HeightF="25">
+          <Controls>
+            <Item1 Ref="60" ControlType="XRTable" Name="xrTable3" SizeF="2339,25" LocationFloat="0,0" Font="Arial, 10pt, charSet=0" Borders="None">
+              <Rows>
+                <Item1 Ref="61" ControlType="XRTableRow" Name="xrTableRow3" Weight="1">
+                  <Cells>
+                    <Item1 Ref="62" ControlType="XRTableCell" Name="xrTableCell27" Weight="0.1303226814789534" Text="xrTableCell27" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="63" EventName="BeforePrint" PropertyName="Text" Expression="[FamilyName]" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="64" ControlType="XRTableCell" Name="xrTableCell29" Weight="0.10297821631115781" Text="xrTableCell29" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="65" EventName="BeforePrint" PropertyName="Text" Expression="[GivenName]" />
+                      </ExpressionBindings>
+                    </Item2>
+                    <Item3 Ref="66" ControlType="XRTableCell" Name="xrTableCell30" Weight="0.13056754075991034" Text="xrTableCell30" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="67" EventName="BeforePrint" PropertyName="Text" Expression="[MiddleName]" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="68" ControlType="XRTableCell" Name="xrTableCell31" Weight="0.13962006862828374" Text="xrTableCell31" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="69" EventName="BeforePrint" PropertyName="Text" Expression="[Gender]" />
+                      </ExpressionBindings>
+                    </Item4>
+                    <Item5 Ref="70" ControlType="XRTableCell" Name="xrTableCell32" Weight="0.10638827846359678" Text="xrTableCell32" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="71" EventName="BeforePrint" PropertyName="Text" Expression="[StreetAddress]" />
+                      </ExpressionBindings>
+                    </Item5>
+                    <Item6 Ref="72" ControlType="XRTableCell" Name="xrTableCell33" Weight="0.1370416292336557" Text="xrTableCell33" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="73" EventName="BeforePrint" PropertyName="Text" Expression="[Suburb]" />
+                      </ExpressionBindings>
+                    </Item6>
+                    <Item7 Ref="74" ControlType="XRTableCell" Name="xrTableCell34" Weight="0.099821150721146945" Text="xrTableCell34" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="75" EventName="BeforePrint" PropertyName="Text" Expression="[State]" />
+                      </ExpressionBindings>
+                    </Item7>
+                    <Item8 Ref="76" ControlType="XRTableCell" Name="xrTableCell35" Weight="0.17470662945167087" Text="xrTableCell35" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="77" EventName="BeforePrint" PropertyName="Text" Expression="[Postcode]" />
+                      </ExpressionBindings>
+                    </Item8>
+                    <Item9 Ref="78" ControlType="XRTableCell" Name="xrTableCell36" Weight="0.09164078842012742" TextFormatString="{0:dd/MM/yyyy}" Text="xrTableCell36" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="79" EventName="BeforePrint" PropertyName="Text" Expression="[Birthdate]" />
+                      </ExpressionBindings>
+                    </Item9>
+                    <Item10 Ref="80" ControlType="XRTableCell" Name="xrTableCell37" Weight="0.093778506442438181" TextFormatString="{0:dd/MM/yyyy}" Text="xrTableCell37" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="81" EventName="BeforePrint" PropertyName="Text" Expression="[StartDate]" />
+                      </ExpressionBindings>
+                    </Item10>
+                    <Item11 Ref="82" ControlType="XRTableCell" Name="xrTableCell38" Weight="0.14801809809302796" TextFormatString="{0:dd/MM/yyyy}" Text="xrTableCell38" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="83" EventName="BeforePrint" PropertyName="Text" Expression="[TerminationDate]" />
+                      </ExpressionBindings>
+                    </Item11>
+                    <Item12 Ref="84" ControlType="XRTableCell" Name="xrTableCell39" Weight="0.1248123432026309" TextFormatString="{0:$0.0000;($0.0000);''} " Text="xrTableCell39" TextAlignment="TopLeft" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="85" EventName="BeforePrint" PropertyName="Text" Expression="[HourlyRate]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="86" UseTextAlignment="false" />
+                    </Item12>
+                    <Item13 Ref="87" ControlType="XRTableCell" Name="xrTableCell40" Weight="0.14662596011379012" Text="xrTableCell40" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="88" EventName="BeforePrint" PropertyName="Text" Expression="[PaymentGroup]" />
+                      </ExpressionBindings>
+                    </Item13>
+                    <Item14 Ref="89" ControlType="XRTableCell" Name="xrTableCell41" Weight="0.079690821559820657" TextFormatString="{0:#,###.000;(#,###.000);''}" Text="xrTableCell41" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="90" EventName="BeforePrint" PropertyName="Text" Expression="[CostCentreName]" />
+                      </ExpressionBindings>
+                    </Item14>
+                    <Item15 Ref="91" ControlType="XRTableCell" Name="xrTableCell42" Weight="0.064103354075624286" TextFormatString="{0:0.000;(0.000);''}" Text="xrTableCell42" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="92" EventName="BeforePrint" PropertyName="Text" Expression="[CostCentreHours]" />
+                      </ExpressionBindings>
+                    </Item15>
+                    <Item16 Ref="93" ControlType="XRTableCell" Name="xrTableCell43" Weight="0.091056611243450936" Text="xrTableCell43" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="94" EventName="BeforePrint" PropertyName="Text" Expression="[StateEmployed]" />
+                      </ExpressionBindings>
+                    </Item16>
+                    <Item17 Ref="95" ControlType="XRTableCell" Name="xrTableCell44" Weight="0.14971362885405454" Text="xrTableCell44" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="96" EventName="BeforePrint" PropertyName="Text" Expression="[Occupation]" />
+                      </ExpressionBindings>
+                    </Item17>
+                    <Item18 Ref="97" ControlType="XRTableCell" Name="xrTableCell45" Weight="0.14785449175826188" Text="xrTableCell45" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="98" EventName="BeforePrint" PropertyName="Text" Expression="[PayLocation]" />
+                      </ExpressionBindings>
+                    </Item18>
+                    <Item19 Ref="99" ControlType="XRTableCell" Name="xrTableCell46" Weight="0.10099003122273406" Text="xrTableCell46" TextAlignment="TopCenter" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="100" EventName="BeforePrint" PropertyName="Text" Expression="[HECSCal]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="101" UseTextAlignment="false" />
+                    </Item19>
+                    <Item20 Ref="102" ControlType="XRTableCell" Name="xrTableCell47" Weight="0.13944745576778647" TextFormatString="{0:#0.000}" Text="xrTableCell47" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="103" EventName="BeforePrint" PropertyName="Text" Expression="[AccruedSL]" />
+                      </ExpressionBindings>
+                    </Item20>
+                    <Item21 Ref="104" ControlType="XRTableCell" Name="xrTableCell48" Weight="0.12248146722436246" TextFormatString="{0:#0.000}" Text="xrTableCell48" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="105" EventName="BeforePrint" PropertyName="Text" Expression="[AccruedAL]" />
+                      </ExpressionBindings>
+                    </Item21>
+                    <Item22 Ref="106" ControlType="XRTableCell" Name="xrTableCell49" Weight="0.099727859497055232" TextFormatString="{0:#0.000}" Text="xrTableCell49" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="107" EventName="BeforePrint" PropertyName="Text" Expression="[AccruedLSL]" />
+                      </ExpressionBindings>
+                    </Item22>
+                    <Item23 Ref="108" ControlType="XRTableCell" Name="xrTableCell50" Weight="0.086642646633166454" TextFormatString="{0:#0.000}" Text="xrTableCell50" XlsxFormatString="{0:0.0000;(0.0000);''} " WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="109" EventName="BeforePrint" PropertyName="Text" Expression="[AccruedRDO]" />
+                      </ExpressionBindings>
+                    </Item23>
+                    <Item24 Ref="110" ControlType="XRTableCell" Name="xrTableCell51" Weight="0.172797315636587" Text="xrTableCell51" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="111" EventName="BeforePrint" PropertyName="Text" Expression="[EmployeeCode]" />
+                      </ExpressionBindings>
+                    </Item24>
+                    <Item25 Ref="112" ControlType="XRTableCell" Name="xrTableCell52" Weight="0.11918032451692105" Text="xrTableCell52" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="113" EventName="BeforePrint" PropertyName="Text" Expression="[EmploymentStatus]" />
+                      </ExpressionBindings>
+                    </Item25>
+                    <Item26 Ref="114" ControlType="XRTableCell" Name="xrTableCell11" Weight="0.11017027592172403" Text="xrTableCell11" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="115" EventName="BeforePrint" PropertyName="Text" Expression="[Email]" />
+                        <Item2 Ref="116" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([ShowEmergencyContactDetails] = False, False, ?)" />
+                      </ExpressionBindings>
+                    </Item26>
+                    <Item27 Ref="117" ControlType="XRTableCell" Name="xrTableCell16" Weight="0.22337373492609014" Text="xrTableCell16" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="118" EventName="BeforePrint" PropertyName="Text" Expression="[HomePhone]" />
+                        <Item2 Ref="119" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([ShowEmergencyContactDetails] = False, False, ?)" />
+                      </ExpressionBindings>
+                    </Item27>
+                    <Item28 Ref="120" ControlType="XRTableCell" Name="xrTableCell13" Weight="0.23145938042567926" Text="xrTableCell13" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="121" EventName="BeforePrint" PropertyName="Text" Expression="[MobilePhone]" />
+                        <Item2 Ref="122" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([ShowEmergencyContactDetails] = False, False, ?)" />
+                      </ExpressionBindings>
+                    </Item28>
+                    <Item29 Ref="123" ControlType="XRTableCell" Name="xrTableCell15" Weight="0.29884323402544344" Text="xrTableCell15" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="124" EventName="BeforePrint" PropertyName="Text" Expression="[EmergencyName]" />
+                        <Item2 Ref="125" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([ShowEmergencyContactDetails] = False, False, ?)" />
+                      </ExpressionBindings>
+                    </Item29>
+                    <Item30 Ref="126" ControlType="XRTableCell" Name="xrTableCell14" Weight="0.33388134704819544" Text="xrTableCell14" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="127" EventName="BeforePrint" PropertyName="Text" Expression="[NextOfKinRelation]" />
+                        <Item2 Ref="128" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([ShowEmergencyContactDetails] = False, False, ?)" />
+                      </ExpressionBindings>
+                    </Item30>
+                    <Item31 Ref="129" ControlType="XRTableCell" Name="xrTableCell12" Weight="0.32040527121554674" Text="xrTableCell12" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="130" EventName="BeforePrint" PropertyName="Text" Expression="[EmergencyPhone]" />
+                        <Item2 Ref="131" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([ShowEmergencyContactDetails] = False, False, ?)" />
+                      </ExpressionBindings>
+                    </Item31>
+                    <Item32 Ref="132" ControlType="XRTableCell" Name="xrTableCell20" Weight="0.33388197876392645" Text="xrTableCell20" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="133" EventName="BeforePrint" PropertyName="Text" Expression="[EmergencyMobile]" />
+                        <Item2 Ref="134" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([ShowEmergencyContactDetails] = False, False, ?)" />
+                      </ExpressionBindings>
+                    </Item32>
+                    <Item33 Ref="135" ControlType="XRTableCell" Name="xrTableCell18" Weight="0.3650473584974695" Text="xrTableCell18" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="136" EventName="BeforePrint" PropertyName="Text" Expression="[EmergencyAddress1]" />
+                        <Item2 Ref="137" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([ShowEmergencyContactDetails] = False, False, ?)" />
+                      </ExpressionBindings>
+                    </Item33>
+                    <Item34 Ref="138" ControlType="XRTableCell" Name="xrTableCell17" Weight="0.20408586604257506" Text="xrTableCell17" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="139" EventName="BeforePrint" PropertyName="Text" Expression="[EmergencyAddress2]" />
+                        <Item2 Ref="140" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([ShowEmergencyContactDetails] = False, False, ?)" />
+                      </ExpressionBindings>
+                    </Item34>
+                    <Item35 Ref="141" ControlType="XRTableCell" Name="xrTableCell19" Weight="0.19143766237066445" Text="xrTableCell19" WordWrap="false">
+                      <ExpressionBindings>
+                        <Item1 Ref="142" EventName="BeforePrint" PropertyName="Text" Expression="[EmergencyAddress3]" />
+                        <Item2 Ref="143" EventName="BeforePrint" PropertyName="Visible" Expression="Iif([ShowEmergencyContactDetails] = False, False, ?)" />
+                      </ExpressionBindings>
+                    </Item35>
+                    <Item36 Ref="144" ControlType="XRTableCell" Name="xrTableCell28" Weight="0.15453219574702329">
+                      <ExpressionBindings>
+                        <Item1 Ref="145" EventName="BeforePrint" PropertyName="Text" Expression="[DepartmentName]" />
+                      </ExpressionBindings>
+                    </Item36>
+                    <Item37 Ref="146" ControlType="XRTableCell" Name="xrTableCell53" Weight="0.2850541412753701" TextFormatString="{0:dd/MM/yyyy hh:mm:ss}" Text="xrTableCell53">
+                      <ExpressionBindings>
+                        <Item1 Ref="147" EventName="BeforePrint" PropertyName="Text" Expression="[LastLogin]" />
+                      </ExpressionBindings>
+                    </Item37>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="148" UseFont="false" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+      </Bands>
+    </Item5>
+  </Bands>
+  <ExportOptions Ref="149">
+    <Xls Ref="150" ShowGridLines="true" />
+    <Xlsx Ref="151" ShowGridLines="true" />
+  </ExportOptions>
+</XtraReportsLayoutSerializer>

@@ -1,0 +1,126 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "DevExpress.Web.Reporting/17.1.16": {
+        "type": "package",
+        "compile": {
+          "lib/net40/DevExpress.XtraReports.v17.1.Web.dll": {}
+        },
+        "runtime": {
+          "lib/net40/DevExpress.XtraReports.v17.1.Web.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DevExpress.Web.Reporting/17.1.16": {
+      "sha512": "MODN2UdFna9fs3SrzluBfwNmADnBhLA5K3k9UYyQOszd8d7e/4Gfh4vZ/pAAgr7oAmqOLaEN4tZe+rVII7PcHA==",
+      "type": "package",
+      "path": "devexpress.web.reporting/17.1.16",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Web.config.install.xdt",
+        "Content/Web.config.uninstall.xdt",
+        "devexpress.web.reporting.17.1.16.nupkg.sha512",
+        "devexpress.web.reporting.nuspec",
+        "lib/net40/DevExpress.XtraReports.v17.1.Web.dll",
+        "lib/net40/DevExpress.XtraReports.v17.1.Web.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "DevExpress.Web.Reporting >= 17.1.16"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\tuan.nguyen\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\DevExpress 20.2\\.NET Core Desktop Libraries\\Offline Packages": {},
+    "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\tuan.nguyen\\Documents\\GitHub\\reactjs-demo\\Server\\Report.Api\\Report.Api.csproj",
+      "projectName": "Report.Api",
+      "projectPath": "C:\\Users\\tuan.nguyen\\Documents\\GitHub\\reactjs-demo\\Server\\Report.Api\\Report.Api.csproj",
+      "packagesPath": "C:\\Users\\tuan.nguyen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tuan.nguyen\\Documents\\GitHub\\reactjs-demo\\Server\\Report.Api\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\DevExpress 20.2\\.NET Core Desktop Libraries\\Offline Packages",
+        "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\tuan.nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress .NET Core Desktop 20.2.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\DevExpress 20.2\\.NET Core Desktop Libraries\\System\\Components\\Packages": {},
+        "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.devexpress.com/ThF9kBzKpsStfeaFGGpOCUbCGg9PMLFp9fGKxnV8JfuxjZPXhx/api": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "DevExpress.Web.Reporting": {
+            "target": "Package",
+            "version": "[17.1.16, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DevExpress.Web.Reporting 17.1.16' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "DevExpress.Web.Reporting",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "+eK0Kth5fOsFLPM4n+FfNavEDMkWcZ0mBGxR37TMnBeKfaBSTRZCxmmJqL/pPnVYlGUl78P2iT0tHsigHThnvA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tuan.nguyen\\Documents\\GitHub\\reactjs-demo\\Server\\Report.Api\\Report.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tuan.nguyen\\.nuget\\packages\\devexpress.web.reporting\\17.1.16\\devexpress.web.reporting.17.1.16.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DevExpress.Web.Reporting 17.1.16' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "DevExpress.Web.Reporting",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}
