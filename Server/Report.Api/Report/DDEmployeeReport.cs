@@ -1,13 +1,14 @@
-//using System;
-//using DevExpress.XtraReports.UI;
+using System;
+using DevExpress.XtraReports.UI;
 
-//namespace Report.Api.Report
-//{
-//    public partial class DDEmployeeReport
-//    {
-//        public DDEmployeeReport()
-//        {
-//            InitializeComponent();
-//        }
-//    }
-//}
+namespace Reporting.Designer
+{
+    [Serializable]
+    public partial class DDEmployeeReport : XtraReport
+    {
+        public DDEmployeeReport()
+        {
+            InitializeComponent();
+        }
+    }
+}

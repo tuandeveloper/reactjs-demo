@@ -5,21 +5,46 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevExpress.Web.Reporting" Version="17.1.16" />
+    <Compile Remove="Report01\**" />
+    <Compile Remove="Report\**" />
+    <Content Remove="Report01\**" />
+    <Content Remove="Report\**" />
+    <EmbeddedResource Remove="Report01\**" />
+    <EmbeddedResource Remove="Report\**" />
+    <None Remove="Report01\**" />
+    <None Remove="Report\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Report\DDEmployeeReport.cs">
+	<Compile Include="Report\DDEmployeeReport.cs">
       <DependentUpon>DDEmployeeReport.repx</DependentUpon>
     </Compile>
-    <Compile Update="Report\DDEmployeeReport.Designer.cs">
+    <Compile Include="Report\DDEmployeeReport.Designer.cs">
       <DependentUpon>DDEmployeeReport.repx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport1.cs">
+      <DependentUpon>XtraReport1.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.vsrepx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Entity\" />
-    <Folder Include="Report01\" />
+    <Folder Include="Service\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Report\DDEmployeeReport.repx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Report\XtraReport1.vsrepx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.AspNetCore.Reporting" Version="20.2.4" />
   </ItemGroup>
 
 

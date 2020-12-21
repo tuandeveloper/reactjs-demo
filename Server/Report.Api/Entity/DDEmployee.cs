@@ -12,7 +12,19 @@ namespace Report.Api.Entity
 
         public DDEmployee()
         {
-            Employees = new List<Employee>();
+            Employees = new List<Employee>()
+            {
+                new Employee()
+                {
+                    FamilyName = "Test01",
+                    GivenName = "test02"
+                },
+                new Employee()
+                {
+                    FamilyName = "Test03",
+                    GivenName = "test04"
+                }
+            };
         }
 
         public class Employee

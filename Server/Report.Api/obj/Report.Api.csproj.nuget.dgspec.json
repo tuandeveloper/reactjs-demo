@@ -47,9 +47,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "DevExpress.Web.Reporting": {
+            "DevExpress.AspNetCore.Reporting": {
               "target": "Package",
-              "version": "[17.1.16, )"
+              "version": "[20.2.4, )"
             }
           },
           "imports": [
