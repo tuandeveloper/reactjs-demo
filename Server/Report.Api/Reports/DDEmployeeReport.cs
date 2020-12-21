@@ -1,10 +1,9 @@
 using System;
 using DevExpress.XtraReports.UI;
 
-namespace Reporting.Designer
+namespace Report.Api.Reports
 {
-    [Serializable]
-    public partial class DDEmployeeReport : XtraReport
+    public partial class DDEmployeeReport
     {
         public DDEmployeeReport()
         {

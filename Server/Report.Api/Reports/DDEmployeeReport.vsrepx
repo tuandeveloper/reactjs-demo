@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="20.2.4.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="DDEmployeeReport" Margins="21, 1, 0, 100" PageWidth="850" PageHeight="1100" Version="20.2" DataSource="#Ref-0">
+  <Extensions>
+    <Item1 Ref="2" Key="VSReportExtInfo" Value=".vsrepx" />
+  </Extensions>
+  <Bands>
+    <Item1 Ref="3" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="0" />
+    <Item2 Ref="4" ControlType="DetailBand" Name="detailBand1" HeightF="25">
+      <Controls>
+        <Item1 Ref="5" ControlType="XRTable" Name="table2" SizeF="650,25" LocationFloat="0,0" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="6" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+              <Cells>
+                <Item1 Ref="7" ControlType="XRTableCell" Name="tableCell6" Weight="1.2999998474121095" Multiline="true" Text="Floor" TextAlignment="TopLeft">
+                  <StylePriority Ref="8" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="9" ControlType="XRTableCell" Name="tableCell7" Weight="1.2999998474121095" Multiline="true" Text="Office" TextAlignment="TopLeft">
+                  <StylePriority Ref="10" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="11" ControlType="XRTableCell" Name="tableCell8" Weight="1.3000006103515625" Multiline="true" Text="Person Name" TextAlignment="TopLeft">
+                  <StylePriority Ref="12" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="13" ControlType="XRTableCell" Name="tableCell9" Weight="1.3000006103515625" Multiline="true" Text="Title" TextAlignment="TopLeft">
+                  <StylePriority Ref="14" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="15" ControlType="XRTableCell" Name="tableCell10" Weight="1.3000006103515625" Multiline="true" Text="Title of courtesy" TextAlignment="TopLeft">
+                  <StylePriority Ref="16" UseTextAlignment="false" />
+                </Item5>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item2>
+    <Item3 Ref="17" ControlType="BottomMarginBand" Name="bottomMarginBand1" />
+    <Item4 Ref="18" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="Items" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="19" ControlType="DetailBand" Name="Detail" HeightF="27.083334">
+          <Controls>
+            <Item1 Ref="20" ControlType="XRTable" Name="table1" SizeF="650,25" LocationFloat="0,0" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="21" ControlType="XRTableRow" Name="tableRow1" Weight="11.5">
+                  <Cells>
+                    <Item1 Ref="22" ControlType="XRTableCell" Name="tableCell1" Weight="0.66666666666666663" Multiline="true" Text="tableCell1" TextAlignment="TopLeft">
+                      <ExpressionBindings>
+                        <Item1 Ref="23" EventName="BeforePrint" PropertyName="Text" Expression="[Floor]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="24" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="25" ControlType="XRTableCell" Name="tableCell2" Weight="0.66666666666666663" Multiline="true" Text="tableCell2" TextAlignment="TopLeft">
+                      <ExpressionBindings>
+                        <Item1 Ref="26" EventName="BeforePrint" PropertyName="Text" Expression="[Office]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="27" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="28" ControlType="XRTableCell" Name="tableCell3" Weight="0.66666666666666663" Multiline="true" Text="tableCell3" TextAlignment="TopLeft">
+                      <ExpressionBindings>
+                        <Item1 Ref="29" EventName="BeforePrint" PropertyName="Text" Expression="[PersonName]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="30" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="31" ControlType="XRTableCell" Name="tableCell4" Weight="0.66666666666666663" Multiline="true" Text="tableCell4" TextAlignment="TopLeft">
+                      <ExpressionBindings>
+                        <Item1 Ref="32" EventName="BeforePrint" PropertyName="Text" Expression="[Title]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="33" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="34" ControlType="XRTableCell" Name="tableCell5" Weight="0.66666666666666663" Multiline="true" Text="tableCell5" TextAlignment="TopLeft">
+                      <ExpressionBindings>
+                        <Item1 Ref="35" EventName="BeforePrint" PropertyName="Text" Expression="[TitleOfCourtesy]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="36" UseTextAlignment="false" />
+                    </Item5>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item1>
+      </Bands>
+    </Item4>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v20.2" Name="objectDataSource1" Base64="PE9iamVjdERhdGFTb3VyY2UgTmFtZT0ib2JqZWN0RGF0YVNvdXJjZTEiPjxDb25zdHJ1Y3RvciAvPjwvT2JqZWN0RGF0YVNvdXJjZT4=" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

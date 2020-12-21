@@ -1,5 +1,5 @@
 ﻿using DevExpress.XtraReports.UI;
-using Reporting.Designer;
+using Report.Api.Reports;
 using System;
 using System.Collections.Generic;
 
@@ -9,7 +9,8 @@ namespace Report.Api.PredefinedReports
     {
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>()
         {
-            ["DDDEmployeeReport"] = () => new DDEmployeeReport()
+             ["MigratedReport"] = () => new XtraReport1(),
+             ["EmployeeReport"] = () => new DDEmployeeReport(),
         };
     }
 }

@@ -6,41 +6,40 @@
 
   <ItemGroup>
     <Compile Remove="Report01\**" />
-    <Compile Remove="Report\**" />
+    <Compile Remove="Reports\**" />
     <Content Remove="Report01\**" />
-    <Content Remove="Report\**" />
+    <Content Remove="Reports\**" />
     <EmbeddedResource Remove="Report01\**" />
-    <EmbeddedResource Remove="Report\**" />
+    <EmbeddedResource Remove="Reports\**" />
     <None Remove="Report01\**" />
-    <None Remove="Report\**" />
+    <None Remove="Reports\**" />
   </ItemGroup>
 
   <ItemGroup>
-	<Compile Include="Report\DDEmployeeReport.cs">
-      <DependentUpon>DDEmployeeReport.repx</DependentUpon>
+    <Compile Include="Reports\DDEmployeeReport.cs">
+      <DependentUpon>DDEmployeeReport.vsrepx</DependentUpon>
     </Compile>
-    <Compile Include="Report\DDEmployeeReport.Designer.cs">
-      <DependentUpon>DDEmployeeReport.repx</DependentUpon>
+    <Compile Include="Reports\DDEmployeeReport.Designer.cs">
+      <DependentUpon>DDEmployeeReport.vsrepx</DependentUpon>
     </Compile>
-    <Compile Include="Report\XtraReport1.cs">
+    <Compile Include="Reports\XtraReport1.cs">
       <DependentUpon>XtraReport1.vsrepx</DependentUpon>
     </Compile>
-    <Compile Include="Report\XtraReport1.Designer.cs">
+    <Compile Include="Reports\XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.vsrepx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Entity\" />
     <Folder Include="Service\" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Report\DDEmployeeReport.repx" />
+    <EmbeddedResource Include="Reports\DDEmployeeReport.vsrepx" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Report\XtraReport1.vsrepx" />
+    <EmbeddedResource Include="Reports\XtraReport1.vsrepx" />
   </ItemGroup>
 
   <ItemGroup>

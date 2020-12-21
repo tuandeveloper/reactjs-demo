@@ -1,7 +1,7 @@
 using System;
 using DevExpress.XtraReports.UI;
 
-namespace Report.Api.Report
+namespace Report.Api.Reports
 {
     public partial class XtraReport1
     {

@@ -1,42 +1,31 @@
-import React from "react";
-import ko from "knockout";
-import "devexpress-reporting/dx-webdocumentviewer";
+import { Navbar } from "./components/navbar/navbar";
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Employees } from "./pages/employees/employees";
+import { ReportMigration } from "./pages/report-migration/report-migration";
+import { Home } from "./pages/home/home";
+import "devextreme/dist/css/dx.common.css";
+import "devextreme/dist/css/dx.material.blue.light.compact.css";
+import "@devexpress/analytics-core/dist/css/dx-analytics.common.css";
+import "@devexpress/analytics-core/dist/css/dx-analytics.light.compact.css";
+import "devexpress-reporting/dist/css/dx-webdocumentviewer.css";
+import "jquery-ui/themes/base/all.css";
 
-class ReportViewer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.reportUrl = ko.observable("DDDEmployeeReport");
-    this.requestOptions = {
-      host: "http://localhost:56061/",
-      // Use this line for the ASP.NET MVC backend.
-      //invokeAction: "/WebDocumentViewer/Invoke"
-      // Use this line for the ASP.NET Core backend
-      invokeAction: "DXXRDV",
-    };
-  }
-  render() {
-    return <div ref="viewer" data-bind="dxReportViewer: $data"></div>;
-  }
-  componentDidMount() {
-    ko.applyBindings(
-      {
-        reportUrl: this.reportUrl,
-        requestOptions: this.requestOptions,
-      },
-      this.refs.viewer
-    );
-  }
-  componentWillUnmount() {
-    ko.cleanNode(this.refs.viewer);
-  }
-}
-
-function App() {
+function App(props) {
   return (
-    <div style={{ width: "100%", height: "1000px" }}>
-      <ReportViewer />
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <div className="content">
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/home" component={Home} />
+            <Route path="/employees" component={Employees} />
+            <Route path="/reportnetframework" component={ReportMigration} />
+          </Switch>
+        </div>
+      </Router>
+    </>
   );
 }
 

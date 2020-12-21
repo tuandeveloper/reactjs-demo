@@ -3,10 +3,10 @@ import ko from "knockout";
 import "devexpress-reporting/dx-webdocumentviewer";
 import { PreviewElements } from "devexpress-reporting/scopes/reporting-viewer";
 
-export class Employees extends React.Component {
+export class ReportMigration extends React.Component {
   constructor(props) {
     super(props);
-    this.reportUrl = ko.observable("EmployeeReport");
+    this.reportUrl = ko.observable("MigratedReport");
     this.requestOptions = {
       host: "http://localhost:56061/",
       invokeAction: "DXXRDV",

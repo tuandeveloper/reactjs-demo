@@ -3,12 +3,4 @@
   <PropertyGroup>
     <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Update="Report\DDEmployeeReport.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Update="Report\XtraReport1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-  </ItemGroup>
 </Project>

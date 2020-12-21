@@ -72,4 +72,3 @@ C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\bin\Debug\n
 C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Threading.AccessControl.dll
 C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\obj\Debug\netcoreapp3.1\Report.Api.csproj.CopyComplete
-C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\obj\Debug\netcoreapp3.1\Report.Api.csprojAssemblyReference.cache
