@@ -1,11 +1,13 @@
 using DevExpress.AspNetCore;
 using DevExpress.XtraReports.Web.Extensions;
 using DevExpress.XtraReports.Web.WebDocumentViewer;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Identity.Web;
 using Report.Api.Service;
 
 namespace Report.Api
@@ -25,12 +27,20 @@ namespace Report.Api
             services.AddControllers();
             services.AddDevExpressControls();
 
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                    .AddMicrosoftIdentityWebApi(Configuration);
+
+            services.AddAuthorization();
+
             services.AddCors(options => {
                 options.AddPolicy("AllowCorsPolicy", builder => {
-                    builder.WithOrigins("http://localhost:3000");
-                    builder.WithHeaders("Content-Type");
+                    builder.AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader();
                 });
             });
+
+            
 
             services.AddMvcCore();
             services.AddScoped<ReportStorageWebExtension, CustomReportStorageWebExtension>();
@@ -50,6 +60,7 @@ namespace Report.Api
 
             app.UseCors("AllowCorsPolicy");
             app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
