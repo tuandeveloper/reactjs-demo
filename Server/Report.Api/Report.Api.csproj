@@ -22,12 +22,6 @@
     <Compile Include="Reports\DDEmployeeReport.Designer.cs">
       <DependentUpon>DDEmployeeReport.vsrepx</DependentUpon>
     </Compile>
-    <Compile Include="Reports\XtraReport1.cs">
-      <DependentUpon>XtraReport1.vsrepx</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\XtraReport1.Designer.cs">
-      <DependentUpon>XtraReport1.vsrepx</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -36,10 +30,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Reports\DDEmployeeReport.vsrepx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Reports\XtraReport1.vsrepx" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,6 +1,5 @@
 using DevExpress.AspNetCore;
 using DevExpress.XtraReports.Web.Extensions;
-using DevExpress.XtraReports.Web.WebDocumentViewer;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -54,7 +53,9 @@ namespace Report.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
             app.UseStaticFiles();
+
             // Initialize reporting services.
             app.UseDevExpressControls();
 

@@ -9,14 +9,4 @@ export const MenuItems = [
     url: "/employees",
     className: "nav-links",
   },
-  {
-    title: "ReportNetFramework",
-    url: "/reportnetframework",
-    className: "nav-links",
-  },
-  {
-    title: "Sign Up",
-    url: "#",
-    className: "nav-links-mobile",
-  },
 ];

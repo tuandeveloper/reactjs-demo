@@ -27,7 +27,6 @@ export function Navbar() {
           );
         })}
       </ul>
-      <Button>Sign up</Button>
     </nav>
   );
 }

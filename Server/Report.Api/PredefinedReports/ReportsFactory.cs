@@ -9,7 +9,6 @@ namespace Report.Api.PredefinedReports
     {
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>()
         {
-             ["MigratedReport"] = () => new XtraReport1(),
              ["EmployeeReport"] = () => new DDEmployeeReport(),
         };
     }

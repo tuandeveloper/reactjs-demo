@@ -1,8 +1,6 @@
 import { Navbar } from "./components/navbar/navbar";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Employees } from "./pages/employees/employees";
-import { ReportMigration } from "./pages/report-migration/report-migration";
 import { Home } from "./pages/home/home";
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.material.blue.light.compact.css";
@@ -10,6 +8,7 @@ import "@devexpress/analytics-core/dist/css/dx-analytics.common.css";
 import "@devexpress/analytics-core/dist/css/dx-analytics.light.compact.css";
 import "devexpress-reporting/dist/css/dx-webdocumentviewer.css";
 import "jquery-ui/themes/base/all.css";
+import { ReportViewer } from "./common/reportviewer/reportViewer";
 
 function App(props) {
   return (
@@ -20,8 +19,9 @@ function App(props) {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/home" component={Home} />
-            <Route path="/employees" component={Employees} />
-            <Route path="/reportnetframework" component={ReportMigration} />
+            <Route path="/employees">
+              <ReportViewer ReportName="EmployeeReport" />
+            </Route>
           </Switch>
         </div>
       </Router>
