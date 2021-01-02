@@ -6,8 +6,11 @@
   
 # How to install 
 - Server side  ([Document](https://docs.devexpress.com/XtraReports/400197/web-reporting/javascript-reporting/server-side-configuration/document-viewer/document-viewer-server-side-configuration-asp-net-core))
+
 1- Install Devpress with Reporting module [Trial version](https://www.devexpress.com/products/try/)
+
 2- Install DevExpress.AspNetCore.Reporting package
+
 ![](https://docs.devexpress.com/XtraReports/images/viewer-server-side-install-nuget.png)
 3- Open the Startup.cs file and modify it to configure services as demonstrated below.
 ```sh
