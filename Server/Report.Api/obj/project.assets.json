@@ -3385,6 +3385,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Report.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "DevExpress.AspNetCore.Reporting": "20.2.4"
+        },
+        "compile": {
+          "bin/placeholder/Report.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Report.Core.dll": {}
+        }
       }
     }
   },
@@ -9942,12 +9955,18 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Report.Core/1.0.0": {
+      "type": "project",
+      "path": "../Report.Core/Report.Core.csproj",
+      "msbuildProject": "../Report.Core/Report.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "DevExpress.AspNetCore.Reporting >= 20.2.4",
-      "Microsoft.Identity.Web >= 1.4.1"
+      "Microsoft.Identity.Web >= 1.4.1",
+      "Report.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -9985,7 +10004,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\tuan.nguyen\\Documents\\GitHub\\reactjs-demo\\Server\\Report.Core\\Report.Core.csproj": {
+              "projectPath": "C:\\Users\\tuan.nguyen\\Documents\\GitHub\\reactjs-demo\\Server\\Report.Core\\Report.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

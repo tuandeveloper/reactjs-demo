@@ -6,35 +6,18 @@
 
   <ItemGroup>
     <Compile Remove="Report01\**" />
-    <Compile Remove="Reports\**" />
     <Content Remove="Report01\**" />
-    <Content Remove="Reports\**" />
     <EmbeddedResource Remove="Report01\**" />
-    <EmbeddedResource Remove="Reports\**" />
     <None Remove="Report01\**" />
-    <None Remove="Reports\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Reports\DDEmployeeReport.cs">
-      <DependentUpon>DDEmployeeReport.vsrepx</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\DDEmployeeReport.Designer.cs">
-      <DependentUpon>DDEmployeeReport.vsrepx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Service\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Reports\DDEmployeeReport.vsrepx" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DevExpress.AspNetCore.Reporting" Version="20.2.4" />
     <PackageReference Include="Microsoft.Identity.Web" Version="1.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Report.Core\Report.Core.csproj" />
   </ItemGroup>
 
 

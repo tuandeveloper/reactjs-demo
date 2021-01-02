@@ -16,7 +16,6 @@ C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\obj\Debug\n
 C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\obj\Debug\netcoreapp3.1\Report.Api.pdb
 C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\obj\Debug\netcoreapp3.1\Report.Api.genruntimeconfig.cache
 C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\obj\Debug\netcoreapp3.1\Report.Api.csproj.CoreCompileInputs.cache
-C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\obj\Debug\netcoreapp3.1\Report.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\obj\Debug\netcoreapp3.1\Report.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\bin\Debug\netcoreapp3.1\DevExpress.AspNetCore.Common.v20.2.dll
 C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\bin\Debug\netcoreapp3.1\DevExpress.AspNetCore.Core.v20.2.dll
@@ -89,3 +88,6 @@ C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\bin\Debug\n
 C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\bin\Debug\netcoreapp3.1\Report.Core.dll
+C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\bin\Debug\netcoreapp3.1\Report.Core.pdb
+C:\Users\tuan.nguyen\Documents\GitHub\reactjs-demo\Server\Report.Api\obj\Debug\netcoreapp3.1\Report.Api.MvcApplicationPartsAssemblyInfo.cs

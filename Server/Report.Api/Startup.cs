@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Identity.Web;
-using Report.Api.Service;
+using Report.Core;
 
 namespace Report.Api
 {
@@ -24,7 +24,6 @@ namespace Report.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDevExpressControls();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     .AddMicrosoftIdentityWebApi(Configuration);
@@ -39,11 +38,11 @@ namespace Report.Api
                 });
             });
 
-            
-
             services.AddMvcCore();
-            services.AddScoped<ReportStorageWebExtension, CustomReportStorageWebExtension>();
 
+            //Register Report services
+            services.AddDevExpressControls();
+            services.AddScoped<ReportStorageWebExtension, MyReportStorageWebExtension>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,7 +52,6 @@ namespace Report.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseStaticFiles();
 
             // Initialize reporting services.

@@ -8,11 +8,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Report.Api.Reports {
-    
+
+using Report.Core.Entity;
+
+namespace Report.Core.Deisnger
+{
     public partial class DDEmployeeReport : DevExpress.XtraReports.UI.XtraReport {
         private void InitializeComponent() {
-            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "Report.Api.Reports.DDEmployeeReport.vsrepx");
+            DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "Report.Core.Designer.DDEmployeeReport.vsrepx");
 
             // Controls
             this.topMarginBand1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.TopMarginBand>("topMarginBand1");
@@ -37,7 +40,7 @@ namespace Report.Api.Reports {
 
             // Data Sources
             this.objectDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.ObjectBinding.ObjectDataSource>("objectDataSource1");
-            this.objectDataSource1.DataSource = typeof(Report.Api.Entity.EmployeeList);
+            this.objectDataSource1.DataSource = typeof(EmployeeList);
         }
         private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
         private DevExpress.XtraReports.UI.DetailBand detailBand1;

@@ -1,7 +1,5 @@
-using System;
-using DevExpress.XtraReports.UI;
 
-namespace Report.Api.Reports
+namespace Report.Core.Deisnger
 {
     public partial class DDEmployeeReport
     {

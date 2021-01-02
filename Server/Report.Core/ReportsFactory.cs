@@ -1,9 +1,9 @@
 ﻿using DevExpress.XtraReports.UI;
-using Report.Api.Reports;
+using Report.Core.Deisnger;
 using System;
 using System.Collections.Generic;
 
-namespace Report.Api.PredefinedReports
+namespace Report.Core
 {
     public static class ReportsFactory
     {

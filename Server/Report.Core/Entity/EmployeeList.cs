@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Linq;
 
-namespace Report.Api.Entity
+namespace Report.Core.Entity
 {
     [DisplayName("Employees")]
     public class EmployeeList
