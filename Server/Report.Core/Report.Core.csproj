@@ -5,10 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Designer\AnnualSalaryReport.vsrepx" />
+    <None Remove="Designer\DDAnnualSalaryReport.vsrepx" />
     <None Remove="Designer\DDEmployeeReport.vsrepx" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Designer\DDAnnualSalaryReport.vsrepx" />
     <EmbeddedResource Include="Designer\DDEmployeeReport.vsrepx" />
   </ItemGroup>
 
@@ -17,12 +20,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Designer\AnnualSalaryReport.Designer.cs">
+      <DependentUpon>AnnualSalaryReport.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Designer\DDAnnualSalaryReport.cs">
+      <DependentUpon>DDAnnualSalaryReport.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Designer\DDAnnualSalaryReport.Designer.cs">
+      <DependentUpon>DDAnnualSalaryReport.vsrepx</DependentUpon>
+    </Compile>
     <Compile Update="Designer\DDEmployeeReport.cs">
       <DependentUpon>DDEmployeeReport.vsrepx</DependentUpon>
     </Compile>
     <Compile Update="Designer\DDEmployeeReport.Designer.cs">
       <DependentUpon>DDEmployeeReport.vsrepx</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entity\AnnualSalaryReport\" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using System;
+using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
+using System.Web;
 
 namespace Report.Core
 {
@@ -26,15 +28,25 @@ namespace Report.Core
             // This method is called only for valid URLs after the IsValidUrl method is called.
             try
             {
-                if (Directory.EnumerateFiles(ReportDirectory).Select(Path.GetFileNameWithoutExtension).Contains(url))
+                HttpUtility.ParseQueryString("");
+                var reportName = url.Split('?')[0];
+                NameValueCollection requestParam = null;
+
+                if (url.Split('?').Count() > 1)
                 {
-                    return File.ReadAllBytes(Path.Combine(ReportDirectory, url + FileExtension));
+                    requestParam = HttpUtility.ParseQueryString(url.Split('?')[1]);
                 }
-                if (ReportsFactory.Reports.ContainsKey(url))
+                
+
+                if (Directory.EnumerateFiles(ReportDirectory).Select(Path.GetFileNameWithoutExtension).Contains(reportName))
+                {
+                    return File.ReadAllBytes(Path.Combine(ReportDirectory, reportName + FileExtension));
+                }
+                if (ReportsFactory.Reports.ContainsKey(reportName))
                 {
                     using (MemoryStream ms = new MemoryStream())
                     {
-                        ReportsFactory.Reports[url]().SaveLayoutToXml(ms);
+                        ReportsFactory.Reports[reportName]().SaveLayoutToXml(ms);
                         return ms.ToArray();
                     }
                 }

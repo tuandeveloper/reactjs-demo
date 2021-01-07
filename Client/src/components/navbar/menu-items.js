@@ -9,4 +9,9 @@ export const MenuItems = [
     url: "/employees",
     className: "nav-links",
   },
+  {
+    title: "Annual salary",
+    url: "/annualsalary",
+    className: "nav-links",
+  },
 ];

@@ -1,20 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 
 namespace Report.Core.Entity
 {
-    [DisplayName("Employees")]
     public class EmployeeList
     {
         public EmployeeList()
         {
             Items = InitializeList();
         }
-        public EmployeeList(int noOfItems)
-        {
-            Items = InitializeList().GetRange(1, noOfItems);
-        }
+      
         public List<DataItem> Items { get; set; }
 
         public List<DataItem> InitializeList()
@@ -39,13 +34,6 @@ namespace Report.Core.Entity
                new DataItem(5, 502, "Matti Karttunen", "Mr.", "Sales Representative"),
                new DataItem(5, 503, "Rita Müller", "Mrs.", "Sales Representative"),
            };
-        }
-
-        public List<DataItem> GetData(int noOfItems)
-        {
-            List<DataItem> revertList = new List<DataItem>(Items);
-            revertList.Reverse();
-            return revertList.Take(noOfItems).ToList();
         }
     }
     public class DataItem

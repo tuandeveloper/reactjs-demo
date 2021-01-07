@@ -19,8 +19,11 @@ function App(props) {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/home" component={Home} />
-            <Route path="/employees">
+            <Route path="/employees" key="1">
               <ReportViewer ReportName="EmployeeReport" />
+            </Route>
+            <Route path="/annualsalary" key="2">
+              <ReportViewer ReportName="AnnualSalaryReport" />
             </Route>
           </Switch>
         </div>

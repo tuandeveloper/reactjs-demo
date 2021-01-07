@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="20.2.4.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="AnnualSalaryReport" Margins="0, 87, 30, 0" PaperKind="A4Rotated" PageWidth="1169" PageHeight="827" Version="20.2">
+  <Extensions>
+    <Item1 Ref="1" Key="VSReportExtInfo" Value=".vsrepx" />
+  </Extensions>
+  <Bands>
+    <Item1 Ref="2" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="Payrolls">
+      <Bands>
+        <Item1 Ref="3" ControlType="DetailBand" Name="ReportEmployeeDetail" HeightF="23.00002">
+          <Controls>
+            <Item1 Ref="4" ControlType="XRPanel" Name="xrPanel18" SizeF="102.0832,22.99998" LocationFloat="979.8613,0" BackColor="Cornsilk">
+              <StylePriority Ref="5" UseBackColor="false" />
+            </Item1>
+            <Item2 Ref="6" ControlType="XRPanel" Name="xrPanel17" SizeF="166.6672,23.00002" LocationFloat="780.4028,0" BackColor="PeachPuff">
+              <StylePriority Ref="7" UseBackColor="false" />
+            </Item2>
+            <Item3 Ref="8" ControlType="XRPanel" Name="xrPanel2" SizeF="414.1101,23.00002" LocationFloat="335.5887,0" BackColor="Lavender" BorderDashStyle="Solid">
+              <StylePriority Ref="9" UseBackColor="false" UseBorderDashStyle="false" />
+            </Item3>
+            <Item4 Ref="10" ControlType="XRLabel" Name="xrLabel42" Text="xrLabel41" SizeF="78.64587,23.00001" LocationFloat="232.3463,0" Font="Arial, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+              <DataBindings>
+                <Item1 Ref="11" FormatString="{0:dd/MM/yyyy}" PropertyName="Text" DataMember="Payrolls.End" />
+              </DataBindings>
+              <StylePriority Ref="12" UseFont="false" />
+            </Item4>
+            <Item5 Ref="13" ControlType="XRLabel" Name="xrLabel11" Text="Payroll Date Range: " SizeF="139.2108,23" LocationFloat="0,0" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,100">
+              <StylePriority Ref="14" UseFont="false" />
+            </Item5>
+            <Item6 Ref="15" ControlType="XRLabel" Name="xrLabel41" Text="xrLabel41" SizeF="76.04272,23" LocationFloat="139.2108,0" Font="Arial, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+              <DataBindings>
+                <Item1 Ref="16" FormatString="{0:dd/MM/yyyy}" PropertyName="Text" DataMember="Payrolls.Start" />
+              </DataBindings>
+              <StylePriority Ref="17" UseFont="false" />
+            </Item6>
+            <Item7 Ref="18" ControlType="XRLabel" Name="xrLabel43" Text="to" SizeF="17.0928,23" LocationFloat="215.2535,0" Font="Arial, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+              <StylePriority Ref="19" UseFont="false" />
+            </Item7>
+          </Controls>
+        </Item1>
+        <Item2 Ref="20" ControlType="DetailReportBand" Name="EmployeeReportBand" Level="0" DataMember="Payrolls.Employees">
+          <Bands>
+            <Item1 Ref="21" ControlType="DetailBand" Name="Detail1" HeightF="17.00002">
+              <Controls>
+                <Item1 Ref="22" ControlType="XRTable" Name="xrTable9" SizeF="166.6669,17.00002" LocationFloat="780.4028,0" Font="Arial, 9.75pt, style=Bold">
+                  <Rows>
+                    <Item1 Ref="23" ControlType="XRTableRow" Name="xrTableRow9" Weight="1">
+                      <Cells>
+                        <Item1 Ref="24" ControlType="XRTableCell" Name="xrTableCell27" Weight="0.51041648327741251" Text="Start" Font="Arial, 9.75pt, style=Bold, charSet=0" BackColor="PeachPuff">
+                          <StylePriority Ref="25" UseFont="false" UseBackColor="false" />
+                        </Item1>
+                        <Item2 Ref="26" ControlType="XRTableCell" Name="xrTableCell28" Weight="0.53125" Text="End&#x9;" Font="Arial, 9.75pt, style=Bold, charSet=0" BackColor="PeachPuff">
+                          <StylePriority Ref="27" UseFont="false" UseBackColor="false" />
+                        </Item2>
+                        <Item3 Ref="28" ControlType="XRTableCell" Name="xrTableCell29" Weight="0.62502302382631669" Text="Hrs" Font="Arial, 9.75pt, style=Bold, charSet=0" BackColor="PeachPuff">
+                          <StylePriority Ref="29" UseFont="false" UseBackColor="false" />
+                        </Item3>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                </Item1>
+                <Item2 Ref="30" ControlType="XRLabel" Name="xrLabel8" Text="Hrs" SizeF="102.0832,17.00002" LocationFloat="979.8581,0" Font="Arial, 9.75pt, style=Bold, charSet=0" BackColor="Cornsilk" Padding="2,2,0,0,100">
+                  <StylePriority Ref="31" UseFont="false" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="32" ControlType="XRTable" Name="xrTable10" SizeF="414.1102,17.00002" LocationFloat="335.5881,0" Font="Arial, 9.75pt, style=Bold" BackColor="Lavender">
+                  <Rows>
+                    <Item1 Ref="33" ControlType="XRTableRow" Name="xrTableRow10" Weight="1">
+                      <Cells>
+                        <Item1 Ref="34" ControlType="XRTableCell" Name="xrTableCell30" Weight="0.60183153384284516" Text="Date" Font="Arial, 9.75pt, style=Bold, charSet=0">
+                          <StylePriority Ref="35" UseFont="false" />
+                        </Item1>
+                        <Item2 Ref="36" ControlType="XRTableCell" Name="xrTableCell31" Weight="1.2565812881493459" Text="Type&#x9;" Font="Arial, 9.75pt, style=Bold, charSet=0">
+                          <StylePriority Ref="37" UseFont="false" />
+                        </Item2>
+                        <Item3 Ref="38" ControlType="XRTableCell" Name="xrTableCell32" Weight="0.51041718751816068" Text="Start" Font="Arial, 9.75pt, style=Bold, charSet=0">
+                          <StylePriority Ref="39" UseFont="false" />
+                        </Item3>
+                        <Item4 Ref="40" ControlType="XRTableCell" Name="xrTableCell33" Weight="0.53124975096929816" Text="End&#x9;" Font="Arial, 9.75pt, style=Bold, charSet=0">
+                          <StylePriority Ref="41" UseFont="false" />
+                        </Item4>
+                        <Item5 Ref="42" ControlType="XRTableCell" Name="xrTableCell34" Weight="0.4791578488668457" Text="Hrs" Font="Arial, 9.75pt, style=Bold, charSet=0">
+                          <StylePriority Ref="43" UseFont="false" />
+                        </Item5>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                  <StylePriority Ref="44" UseBackColor="false" />
+                </Item3>
+                <Item4 Ref="45" ControlType="XRTable" Name="xrTable23" SizeF="252.0833,17.00002" LocationFloat="68.377,0" Font="Arial, 9.75pt, style=Bold">
+                  <Rows>
+                    <Item1 Ref="46" ControlType="XRTableRow" Name="xrTableRow23" Weight="1">
+                      <Cells>
+                        <Item1 Ref="47" ControlType="XRTableCell" Name="xrTableCell59" Weight="4.1470582772050886" Text="Employee" Font="Arial, 9.75pt, style=Bold, charSet=0">
+                          <StylePriority Ref="48" UseFont="false" />
+                        </Item1>
+                        <Item2 Ref="49" ControlType="XRTableCell" Name="xrTableCell60" Weight="2.970587966901133" Text="Employee Code" Font="Arial, 9.75pt, style=Bold, charSet=0">
+                          <StylePriority Ref="50" UseFont="false" />
+                        </Item2>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                </Item4>
+              </Controls>
+            </Item1>
+            <Item2 Ref="51" ControlType="DetailReportBand" Name="DetailReport1" Level="0" DataMember="Payrolls.Employees.WorkingDayGroups">
+              <Bands>
+                <Item1 Ref="52" ControlType="DetailBand" Name="Detail2" HeightF="0" />
+                <Item2 Ref="53" ControlType="DetailReportBand" Name="DetailReport2" Level="0" DataMember="Payrolls.Employees.WorkingDayGroups.WorkingDays">
+                  <Bands>
+                    <Item1 Ref="54" ControlType="DetailBand" Name="Detail3" HeightF="25.00003">
+                      <Controls>
+                        <Item1 Ref="55" ControlType="XRTable" Name="xrTable6" SizeF="252.0822,25" LocationFloat="68.37698,0">
+                          <Rows>
+                            <Item1 Ref="56" ControlType="XRTableRow" Name="xrTableRow6" Weight="1">
+                              <Cells>
+                                <Item1 Ref="57" ControlType="XRTableCell" Name="xrTableCell18" Weight="2.3764047956566" Text="xrTableCell18" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                                  <DataBindings>
+                                    <Item1 Ref="58" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeName" />
+                                  </DataBindings>
+                                </Item1>
+                                <Item2 Ref="59" ControlType="XRTableCell" Name="xrTableCell19" Weight="1.7022292208987804" Text="xrTableCell19" Font="Arial, 9.75pt, charSet=0">
+                                  <DataBindings>
+                                    <Item1 Ref="60" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeCode" />
+                                  </DataBindings>
+                                </Item2>
+                              </Cells>
+                            </Item1>
+                          </Rows>
+                        </Item1>
+                        <Item2 Ref="61" ControlType="XRPanel" Name="xrPanel11" SizeF="102.0833,25" LocationFloat="979.8699,0" BackColor="Cornsilk">
+                          <StylePriority Ref="62" UseBackColor="false" />
+                        </Item2>
+                        <Item3 Ref="63" ControlType="XRPanel" Name="xrPanel7" SizeF="166.6669,25" LocationFloat="780.4118,0" BackColor="PeachPuff">
+                          <Controls>
+                            <Item1 Ref="64" ControlType="XRTable" Name="xrTable2" SizeF="166.6584,25" LocationFloat="0,0">
+                              <Rows>
+                                <Item1 Ref="65" ControlType="XRTableRow" Name="xrTableRow2" Weight="1">
+                                  <Cells>
+                                    <Item1 Ref="66" ControlType="XRTableCell" Name="xrTableCell4" Weight="1" Text="xrTableCell4" TextAlignment="TopRight" Font="Arial, 9.75pt, charSet=0">
+                                      <DataBindings>
+                                        <Item1 Ref="67" PropertyName="Text" DataMember="Payrolls.Employees.WorkingDayGroups.WorkingDays.RosterStartHourString" />
+                                      </DataBindings>
+                                      <StylePriority Ref="68" UseFont="false" UseTextAlignment="false" />
+                                    </Item1>
+                                    <Item2 Ref="69" ControlType="XRTableCell" Name="xrTableCell5" Weight="1" Text="xrTableCell5" TextAlignment="TopRight" Font="Arial, 9.75pt, charSet=0">
+                                      <DataBindings>
+                                        <Item1 Ref="70" PropertyName="Text" DataMember="Payrolls.Employees.WorkingDayGroups.WorkingDays.RosterEndHourString" />
+                                      </DataBindings>
+                                      <StylePriority Ref="71" UseFont="false" UseTextAlignment="false" />
+                                    </Item2>
+                                    <Item3 Ref="72" ControlType="XRTableCell" Name="xrTableCell6" Weight="1" Text="xrTableCell6" TextAlignment="TopRight" Font="Arial, 9.75pt, charSet=0">
+                                      <DataBindings>
+                                        <Item1 Ref="73" PropertyName="Text" DataMember="Payrolls.Employees.WorkingDayGroups.WorkingDays.RosterCalHourString" />
+                                      </DataBindings>
+                                      <StylePriority Ref="74" UseFont="false" UseTextAlignment="false" />
+                                    </Item3>
+                                  </Cells>
+                                </Item1>
+                              </Rows>
+                            </Item1>
+                          </Controls>
+                          <StylePriority Ref="75" UseBackColor="false" />
+                        </Item3>
+                        <Item4 Ref="76" ControlType="XRPanel" Name="xrPanel3" SizeF="414.1125,25" LocationFloat="335.5832,0" BackColor="Lavender">
+                          <Controls>
+                            <Item1 Ref="77" ControlType="XRTable" Name="xrTable1" SizeF="414.1103,24.99997" LocationFloat="0.002197266,6.152743E-05" BackColor="Lavender">
+                              <Rows>
+                                <Item1 Ref="78" ControlType="XRTableRow" Name="xrTableRow1" Weight="1">
+                                  <Cells>
+                                    <Item1 Ref="79" ControlType="XRTableCell" Name="timeSheetDate" Weight="0.52407656344876641" Multiline="true" TextTrimming="None" Text="timeSheetDate" XlsxFormatString="dd/MM/yyyy" TextAlignment="TopLeft" Font="Arial, 9.75pt, charSet=0">
+                                      <DataBindings>
+                                        <Item1 Ref="80" FormatString="{0:dd/MM/yyyy}" PropertyName="Text" DataMember="Payrolls.Employees.WorkingDayGroups.TimeSheetDate" />
+                                      </DataBindings>
+                                      <StylePriority Ref="81" UseFont="false" UseTextAlignment="false" />
+                                    </Item1>
+                                    <Item2 Ref="82" ControlType="XRTableCell" Name="xrTableCell7" Weight="1.0942408372640979" CanGrow="false" Text="xrTableCell7" TextAlignment="TopLeft" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                                      <DataBindings>
+                                        <Item1 Ref="83" PropertyName="Text" DataMember="Payrolls.Employees.WorkingDayGroups.WorkingDays.DateType" />
+                                      </DataBindings>
+                                      <StylePriority Ref="84" UseFont="false" UseTextAlignment="false" />
+                                    </Item2>
+                                    <Item3 Ref="85" ControlType="XRTableCell" Name="xrTableCell1" Weight="0.44447246589514472" Text="xrTableCell1" TextAlignment="TopRight" Font="Arial, 9.75pt, charSet=0">
+                                      <DataBindings>
+                                        <Item1 Ref="86" FormatString="{0:HH:mm}" PropertyName="Text" DataMember="Payrolls.Employees.WorkingDayGroups.WorkingDays.StartHourString" />
+                                      </DataBindings>
+                                      <StylePriority Ref="87" UseFont="false" UseTextAlignment="false" />
+                                    </Item3>
+                                    <Item4 Ref="88" ControlType="XRTableCell" Name="xrTableCell2" Weight="0.46261358641514816" Text="xrTableCell2" TextAlignment="TopRight" Font="Arial, 9.75pt, charSet=0">
+                                      <DataBindings>
+                                        <Item1 Ref="89" PropertyName="Text" DataMember="Payrolls.Employees.WorkingDayGroups.WorkingDays.EndHourString" />
+                                      </DataBindings>
+                                      <StylePriority Ref="90" UseFont="false" UseTextAlignment="false" />
+                                    </Item4>
+                                    <Item5 Ref="91" ControlType="XRTableCell" Name="xrTableCell3" Weight="0.41724200496817332" Text="xrTableCell3" TextAlignment="TopRight" Font="Arial, 9.75pt, charSet=0">
+                                      <DataBindings>
+                                        <Item1 Ref="92" PropertyName="Text" DataMember="Payrolls.Employees.WorkingDayGroups.WorkingDays.CalHourString" />
+                                      </DataBindings>
+                                      <StylePriority Ref="93" UseFont="false" UseTextAlignment="false" />
+                                    </Item5>
+                                  </Cells>
+                                </Item1>
+                              </Rows>
+                              <StylePriority Ref="94" UseBackColor="false" />
+                            </Item1>
+                          </Controls>
+                          <StylePriority Ref="95" UseBackColor="false" />
+                        </Item4>
+                      </Controls>
+                    </Item1>
+                    <Item2 Ref="96" ControlType="GroupFooterBand" Name="GroupFooter2" HeightF="25">
+                      <Controls>
+                        <Item1 Ref="97" ControlType="XRTable" Name="xrTable18" SizeF="252.0805,25" LocationFloat="68.37858,0">
+                          <Rows>
+                            <Item1 Ref="98" ControlType="XRTableRow" Name="xrTableRow18" Weight="1">
+                              <Cells>
+                                <Item1 Ref="99" ControlType="XRTableCell" Name="xrTableCell49" Weight="2.3764047956566" Text="xrTableCell18" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                                  <DataBindings>
+                                    <Item1 Ref="100" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeName" />
+                                  </DataBindings>
+                                </Item1>
+                                <Item2 Ref="101" ControlType="XRTableCell" Name="xrTableCell50" Weight="1.7022030512074058" Text="xrTableCell19" Font="Arial, 9.75pt, charSet=0">
+                                  <DataBindings>
+                                    <Item1 Ref="102" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeCode" />
+                                  </DataBindings>
+                                </Item2>
+                              </Cells>
+                            </Item1>
+                          </Rows>
+                        </Item1>
+                        <Item2 Ref="103" ControlType="XRLabel" Name="xrLabel2" Text="xrLabel2" TextAlignment="TopRight" SizeF="102.0834,24.99999" LocationFloat="979.8629,0" Font="Arial, 9.75pt, charSet=0" BackColor="Cornsilk" Padding="2,2,0,0,100" Borders="Top">
+                          <DataBindings>
+                            <Item1 Ref="104" PropertyName="Text" DataMember="Payrolls.Employees.WorkingDayGroups.DifferenceCalTotalString" />
+                          </DataBindings>
+                          <StylePriority Ref="105" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                        </Item2>
+                        <Item3 Ref="106" ControlType="XRTable" Name="xrTable7" SizeF="414.1113,25" LocationFloat="335.5808,0" BackColor="Lavender">
+                          <Rows>
+                            <Item1 Ref="107" ControlType="XRTableRow" Name="xrTableRow7" Weight="1">
+                              <Cells>
+                                <Item1 Ref="108" ControlType="XRTableCell" Name="xrTableCell23" Weight="0.87051345539409253" Multiline="true" TextTrimming="None" Text="xrTableCell23" XlsxFormatString="dd/MM/yyyy" TextAlignment="TopLeft" Font="Arial, 9.75pt, charSet=0">
+                                  <DataBindings>
+                                    <Item1 Ref="109" FormatString="{0:dd/MM/yyyy}" PropertyName="Text" DataMember="Payrolls.Employees.WorkingDayGroups.TimeSheetDate" />
+                                  </DataBindings>
+                                  <StylePriority Ref="110" UseFont="false" UseTextAlignment="false" />
+                                </Item1>
+                                <Item2 Ref="111" ControlType="XRTableCell" Name="xrTableCell24" Weight="1.8175820623257644" Text="Total" TextAlignment="TopLeft" Font="Arial, 9.75pt, charSet=0">
+                                  <StylePriority Ref="112" UseFont="false" UseTextAlignment="false" />
+                                </Item2>
+                                <Item3 Ref="113" ControlType="XRTableCell" Name="xrTableCell20" Weight="0.73827263673032351" />
+                                <Item4 Ref="114" ControlType="XRTableCell" Name="xrTableCell21" Weight="0.76841915537244687" />
+                                <Item5 Ref="115" ControlType="XRTableCell" Name="xrTableCell22" Weight="0.69308395384515609" Text="xrTableCell22" TextAlignment="TopRight" Font="Arial, 9.75pt, charSet=0" Borders="Top">
+                                  <DataBindings>
+                                    <Item1 Ref="116" PropertyName="Text" DataMember="Payrolls.Employees.WorkingDayGroups.TotalHourString" />
+                                  </DataBindings>
+                                  <StylePriority Ref="117" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                                </Item5>
+                              </Cells>
+                            </Item1>
+                          </Rows>
+                          <StylePriority Ref="118" UseBackColor="false" />
+                        </Item3>
+                        <Item4 Ref="119" ControlType="XRPanel" Name="xrPanel8" SizeF="166.6695,25" LocationFloat="780.4033,0" BackColor="PeachPuff">
+                          <Controls>
+                            <Item1 Ref="120" ControlType="XRLabel" Name="xrLabel1" Text="xrLabel1" TextAlignment="TopRight" SizeF="62.5014,25" LocationFloat="104.1681,0" Font="Arial, 9.75pt, charSet=0" BackColor="PeachPuff" Padding="2,2,0,0,100" Borders="Top">
+                              <DataBindings>
+                                <Item1 Ref="121" PropertyName="Text" DataMember="Payrolls.Employees.WorkingDayGroups.RosterTotalHourString" />
+                              </DataBindings>
+                              <StylePriority Ref="122" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                            </Item1>
+                          </Controls>
+                          <StylePriority Ref="123" UseBackColor="false" />
+                        </Item4>
+                      </Controls>
+                    </Item2>
+                  </Bands>
+                </Item2>
+                <Item3 Ref="124" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="246.9998">
+                  <Controls>
+                    <Item1 Ref="125" ControlType="XRLine" Name="xrLine1" LineStyle="Dash" SizeF="1013.569,4.08342" LocationFloat="68.37582,242.9164" BorderDashStyle="Solid">
+                      <StylePriority Ref="126" UseBorderDashStyle="false" />
+                    </Item1>
+                    <Item2 Ref="127" ControlType="XRTable" Name="xrTable22" SizeF="252.0833,18.91663" LocationFloat="68.37589,223.9998">
+                      <Rows>
+                        <Item1 Ref="128" ControlType="XRTableRow" Name="xrTableRow22" Weight="1">
+                          <Cells>
+                            <Item1 Ref="129" ControlType="XRTableCell" Name="xrTableCell57" Weight="2.3764047956566" Text="xrTableCell18" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="130" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeName" />
+                              </DataBindings>
+                            </Item1>
+                            <Item2 Ref="131" ControlType="XRTableCell" Name="xrTableCell58" Weight="1.7022472434186893" Text="xrTableCell19" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="132" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeCode" />
+                              </DataBindings>
+                              <StylePriority Ref="133" UseBorders="false" />
+                            </Item2>
+                          </Cells>
+                        </Item1>
+                      </Rows>
+                      <StylePriority Ref="134" UseBorders="false" UseBorderDashStyle="false" />
+                    </Item2>
+                    <Item3 Ref="135" ControlType="XRTable" Name="xrTable21" SizeF="252.0833,20.99995" LocationFloat="68.37588,202.9999">
+                      <Rows>
+                        <Item1 Ref="136" ControlType="XRTableRow" Name="xrTableRow21" Weight="1">
+                          <Cells>
+                            <Item1 Ref="137" ControlType="XRTableCell" Name="xrTableCell55" Weight="2.3764047956566" Text="xrTableCell18" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="138" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeName" />
+                              </DataBindings>
+                            </Item1>
+                            <Item2 Ref="139" ControlType="XRTableCell" Name="xrTableCell56" Weight="1.7022472434186893" Text="xrTableCell19" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="140" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeCode" />
+                              </DataBindings>
+                            </Item2>
+                          </Cells>
+                        </Item1>
+                      </Rows>
+                    </Item3>
+                    <Item4 Ref="141" ControlType="XRTable" Name="xrTable20" SizeF="252.0833,20.99995" LocationFloat="68.37588,181.9999">
+                      <Rows>
+                        <Item1 Ref="142" ControlType="XRTableRow" Name="xrTableRow20" Weight="1">
+                          <Cells>
+                            <Item1 Ref="143" ControlType="XRTableCell" Name="xrTableCell53" Weight="2.3764047956566" Text="xrTableCell18" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="144" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeName" />
+                              </DataBindings>
+                            </Item1>
+                            <Item2 Ref="145" ControlType="XRTableCell" Name="xrTableCell54" Weight="1.7022472434186893" Text="xrTableCell19" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="146" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeCode" />
+                              </DataBindings>
+                            </Item2>
+                          </Cells>
+                        </Item1>
+                      </Rows>
+                    </Item4>
+                    <Item5 Ref="147" ControlType="XRTable" Name="xrTable19" SizeF="252.0833,20.99995" LocationFloat="68.37588,160.9999">
+                      <Rows>
+                        <Item1 Ref="148" ControlType="XRTableRow" Name="xrTableRow19" Weight="1">
+                          <Cells>
+                            <Item1 Ref="149" ControlType="XRTableCell" Name="xrTableCell51" Weight="2.3764047956566" Text="xrTableCell18" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="150" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeName" />
+                              </DataBindings>
+                            </Item1>
+                            <Item2 Ref="151" ControlType="XRTableCell" Name="xrTableCell52" Weight="1.7022472434186893" Text="xrTableCell19" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="152" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeCode" />
+                              </DataBindings>
+                            </Item2>
+                          </Cells>
+                        </Item1>
+                      </Rows>
+                    </Item5>
+                    <Item6 Ref="153" ControlType="XRTable" Name="xrTable17" SizeF="252.0833,20.99995" LocationFloat="68.37855,140">
+                      <Rows>
+                        <Item1 Ref="154" ControlType="XRTableRow" Name="xrTableRow17" Weight="1">
+                          <Cells>
+                            <Item1 Ref="155" ControlType="XRTableCell" Name="xrTableCell47" Weight="2.3764047956566" Text="xrTableCell18" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="156" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeName" />
+                              </DataBindings>
+                            </Item1>
+                            <Item2 Ref="157" ControlType="XRTableCell" Name="xrTableCell48" Weight="1.7022472434186893" Text="xrTableCell19" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="158" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeCode" />
+                              </DataBindings>
+                            </Item2>
+                          </Cells>
+                        </Item1>
+                      </Rows>
+                    </Item6>
+                    <Item7 Ref="159" ControlType="XRTable" Name="xrTable16" SizeF="252.0833,22.99995" LocationFloat="68.37699,117">
+                      <Rows>
+                        <Item1 Ref="160" ControlType="XRTableRow" Name="xrTableRow16" Weight="1">
+                          <Cells>
+                            <Item1 Ref="161" ControlType="XRTableCell" Name="xrTableCell45" Weight="2.3764047956566" Text="xrTableCell18" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="162" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeName" />
+                              </DataBindings>
+                            </Item1>
+                            <Item2 Ref="163" ControlType="XRTableCell" Name="xrTableCell46" Weight="1.7022472434186893" Text="xrTableCell19" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="164" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeCode" />
+                              </DataBindings>
+                            </Item2>
+                          </Cells>
+                        </Item1>
+                      </Rows>
+                    </Item7>
+                    <Item8 Ref="165" ControlType="XRTable" Name="xrTable15" SizeF="252.0833,23.00001" LocationFloat="68.37699,94.00002">
+                      <Rows>
+                        <Item1 Ref="166" ControlType="XRTableRow" Name="xrTableRow15" Weight="1">
+                          <Cells>
+                            <Item1 Ref="167" ControlType="XRTableCell" Name="xrTableCell43" Weight="2.3764047956566" Text="xrTableCell18" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="168" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeName" />
+                              </DataBindings>
+                            </Item1>
+                            <Item2 Ref="169" ControlType="XRTableCell" Name="xrTableCell44" Weight="1.7022472434186893" Text="xrTableCell19" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="170" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeCode" />
+                              </DataBindings>
+                            </Item2>
+                          </Cells>
+                        </Item1>
+                      </Rows>
+                    </Item8>
+                    <Item9 Ref="171" ControlType="XRTable" Name="xrTable14" SizeF="252.0833,25.08322" LocationFloat="68.37806,68.9168">
+                      <Rows>
+                        <Item1 Ref="172" ControlType="XRTableRow" Name="xrTableRow14" Weight="1">
+                          <Cells>
+                            <Item1 Ref="173" ControlType="XRTableCell" Name="xrTableCell41" Weight="2.3764047956566" Text="xrTableCell18" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="174" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeName" />
+                              </DataBindings>
+                            </Item1>
+                            <Item2 Ref="175" ControlType="XRTableCell" Name="xrTableCell42" Weight="1.7022472434186893" Text="xrTableCell19" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="176" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeCode" />
+                              </DataBindings>
+                            </Item2>
+                          </Cells>
+                        </Item1>
+                      </Rows>
+                    </Item9>
+                    <Item10 Ref="177" ControlType="XRTable" Name="xrTable13" SizeF="252.0833,22.91679" LocationFloat="68.37699,46.00001">
+                      <Rows>
+                        <Item1 Ref="178" ControlType="XRTableRow" Name="xrTableRow13" Weight="1">
+                          <Cells>
+                            <Item1 Ref="179" ControlType="XRTableCell" Name="xrTableCell39" Weight="2.3764047956566" Text="xrTableCell18" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="180" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeName" />
+                              </DataBindings>
+                            </Item1>
+                            <Item2 Ref="181" ControlType="XRTableCell" Name="xrTableCell40" Weight="1.7022472434186893" Text="xrTableCell19" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="182" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeCode" />
+                              </DataBindings>
+                            </Item2>
+                          </Cells>
+                        </Item1>
+                      </Rows>
+                    </Item10>
+                    <Item11 Ref="183" ControlType="XRTable" Name="xrTable12" SizeF="252.0833,23.00001" LocationFloat="68.37806,23.00001">
+                      <Rows>
+                        <Item1 Ref="184" ControlType="XRTableRow" Name="xrTableRow12" Weight="1">
+                          <Cells>
+                            <Item1 Ref="185" ControlType="XRTableCell" Name="xrTableCell37" Weight="2.3764047956566" Text="xrTableCell18" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="186" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeName" />
+                              </DataBindings>
+                            </Item1>
+                            <Item2 Ref="187" ControlType="XRTableCell" Name="xrTableCell38" Weight="1.7022472434186893" Text="xrTableCell19" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="188" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeCode" />
+                              </DataBindings>
+                            </Item2>
+                          </Cells>
+                        </Item1>
+                      </Rows>
+                    </Item11>
+                    <Item12 Ref="189" ControlType="XRTable" Name="xrTable11" SizeF="252.0844,23.00001" LocationFloat="68.37699,0">
+                      <Rows>
+                        <Item1 Ref="190" ControlType="XRTableRow" Name="xrTableRow11" Weight="1">
+                          <Cells>
+                            <Item1 Ref="191" ControlType="XRTableCell" Name="xrTableCell35" Weight="2.3764047956566" Text="xrTableCell18" WordWrap="false" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="192" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeName" />
+                              </DataBindings>
+                            </Item1>
+                            <Item2 Ref="193" ControlType="XRTableCell" Name="xrTableCell36" Weight="1.7022650190547637" Text="xrTableCell19" Font="Arial, 9.75pt, charSet=0">
+                              <DataBindings>
+                                <Item1 Ref="194" PropertyName="Text" DataMember="Payrolls.Employees.EmployeeCode" />
+                              </DataBindings>
+                            </Item2>
+                          </Cells>
+                        </Item1>
+                      </Rows>
+                    </Item12>
+                    <Item13 Ref="195" ControlType="XRPanel" Name="xrPanel12" SizeF="102.0836,246.9998" LocationFloat="979.8697,0" BackColor="Cornsilk">
+                      <Controls>
+                        <Item1 Ref="196" ControlType="XRLabel" Name="xrLabel40" Text="xrLabel40" TextAlignment="TopRight" SizeF="100.001,18.91661" LocationFloat="2.082324,223.9998" Font="Arial, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+                          <DataBindings>
+                            <Item1 Ref="197" PropertyName="Text" DataMember="Payrolls.Employees.AdditionalOvertimePayString" />
+                          </DataBindings>
+                          <StylePriority Ref="198" UseBorders="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+                        </Item1>
+                        <Item2 Ref="199" ControlType="XRLabel" Name="xrLabel39" Text="xrLabel39" TextAlignment="TopRight" SizeF="102.0834,22.91679" LocationFloat="0,46" Font="Arial, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+                          <DataBindings>
+                            <Item1 Ref="200" PropertyName="Text" DataMember="Payrolls.Employees.AdditionalOvertimePayString" />
+                          </DataBindings>
+                          <StylePriority Ref="201" UseTextAlignment="false" />
+                        </Item2>
+                        <Item3 Ref="202" ControlType="XRLabel" Name="xrLabel38" Text="xrLabel38" TextAlignment="TopRight" SizeF="102.0834,23.00002" LocationFloat="0,22.99998" Font="Arial, 9.75pt" Padding="2,2,0,0,100">
+                          <DataBindings>
+                            <Item1 Ref="203" PropertyName="Text" DataMember="Payrolls.Employees.OverTimeThresholdString" />
+                          </DataBindings>
+                          <StylePriority Ref="204" UseFont="false" UseTextAlignment="false" />
+                        </Item3>
+                        <Item4 Ref="205" ControlType="XRLabel" Name="xrLabel31" Text="xrLabel32" TextAlignment="TopRight" SizeF="102.0833,23.00001" LocationFloat="0,0" Font="Arial, 9.75pt" BackColor="Cornsilk" Padding="2,2,0,0,100" Borders="Top">
+                          <DataBindings>
+                            <Item1 Ref="206" PropertyName="Text" DataMember="Payrolls.Employees.DifferenceCalTotalHourString" />
+                          </DataBindings>
+                          <StylePriority Ref="207" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                        </Item4>
+                      </Controls>
+                      <StylePriority Ref="208" UseBackColor="false" />
+                    </Item13>
+                    <Item14 Ref="209" ControlType="XRPanel" Name="xrPanel9" SizeF="166.6672,246.9998" LocationFloat="780.4115,0" BackColor="PeachPuff">
+                      <Controls>
+                        <Item1 Ref="210" ControlType="XRLabel" Name="xrLabel30" Text="xrLabel32" TextAlignment="TopRight" SizeF="66.66656,23" LocationFloat="100.0006,0" Font="Arial, 9.75pt" BackColor="PeachPuff" Padding="2,2,0,0,100" Borders="Top">
+                          <DataBindings>
+                            <Item1 Ref="211" PropertyName="Text" DataMember="Payrolls.Employees.RosterTotalTimeSheetHourString" />
+                          </DataBindings>
+                          <StylePriority Ref="212" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                        </Item1>
+                        <Item2 Ref="213" ControlType="XRLabel" Name="xrLabel26" Text="OverTime" TextAlignment="TopLeft" SizeF="66.66656,18.91661" LocationFloat="100.0006,223.9998" Font="Arial, 9.75pt, style=Bold, charSet=0" BackColor="PeachPuff" Padding="2,2,0,0,100">
+                          <StylePriority Ref="214" UseBackColor="false" UseBorders="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+                        </Item2>
+                      </Controls>
+                      <StylePriority Ref="215" UseBackColor="false" />
+                    </Item14>
+                    <Item15 Ref="216" ControlType="XRPanel" Name="xrPanel4" SizeF="414.1119,246.9998" LocationFloat="335.5869,0" BackColor="Lavender">
+                      <Controls>
+                        <Item1 Ref="217" ControlType="XRLabel" Name="xrLabel22" Text="Outside Threshold Hrs" TextAlignment="TopLeft" SizeF="227.7415,18.91663" LocationFloat="0,223.9998" Font="Arial, 9.75pt, style=Bold, charSet=0" BackColor="Lavender" Padding="2,2,0,0,100">
+                          <StylePriority Ref="218" UseBackColor="false" UseBorders="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+                        </Item1>
+                        <Item2 Ref="219" ControlType="XRLabel" Name="xrLabel35" Text="xrLabel34" TextAlignment="TopRight" SizeF="58.71863,20.99995" LocationFloat="355.3932,202.9999" Font="Arial, 9.75pt" Padding="2,2,0,0,100">
+                          <DataBindings>
+                            <Item1 Ref="220" PropertyName="Text" DataMember="Payrolls.Employees.AnnualPenaltyRate.AdditionalPenaltyHourString" />
+                          </DataBindings>
+                          <StylePriority Ref="221" UseFont="false" UseTextAlignment="false" />
+                        </Item2>
+                        <Item3 Ref="222" ControlType="XRLabel" Name="xrLabel37" Text="xrLabel12" TextAlignment="TopRight" SizeF="58.71957,20.99995" LocationFloat="355.3898,140" Font="Arial, 9.75pt" Padding="2,2,0,0,100">
+                          <DataBindings>
+                            <Item1 Ref="223" PropertyName="Text" DataMember="Payrolls.Employees.AnnualPenaltyRate.TotalString" />
+                          </DataBindings>
+                          <StylePriority Ref="224" UseFont="false" UseTextAlignment="false" />
+                        </Item3>
+                        <Item4 Ref="225" ControlType="XRLabel" Name="xrLabel36" Text="xrLabel34" TextAlignment="TopRight" SizeF="58.71863,18.91661" LocationFloat="355.3932,223.9998" Font="Arial, 9.75pt" Padding="2,2,0,0,100">
+                          <DataBindings>
+                            <Item1 Ref="226" PropertyName="Text" DataMember="Payrolls.Employees.AnnualPenaltyRate.AdditionalPenaltyHourString" />
+                          </DataBindings>
+                          <StylePriority Ref="227" UseFont="false" UseBorders="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+                        </Item4>
+                        <Item5 Ref="228" ControlType="XRLabel" Name="xrLabel34" Text="xrLabel34" TextAlignment="TopRight" SizeF="58.71863,20.99998" LocationFloat="355.3908,160.9999" Font="Arial, 9.75pt" Padding="2,2,0,0,100">
+                          <DataBindings>
+                            <Item1 Ref="229" PropertyName="Text" DataMember="Payrolls.Employees.AnnualPenaltyRate.PenaltyThresholdString" />
+                          </DataBindings>
+                          <StylePriority Ref="230" UseFont="false" UseTextAlignment="false" />
+                        </Item5>
+                        <Item6 Ref="231" ControlType="XRLabel" Name="xrLabel33" Text="xrLabel12" TextAlignment="TopRight" SizeF="58.71967,23.00001" LocationFloat="355.3923,117" Font="Arial, 9.75pt" Padding="2,2,0,0,100">
+                          <DataBindings>
+                            <Item1 Ref="232" PropertyName="Text" DataMember="Payrolls.Employees.AnnualPenaltyRate.SevenAmToSeventPmString" />
+                          </DataBindings>
+                          <StylePriority Ref="233" UseFont="false" UseTextAlignment="false" />
+                        </Item6>
+                        <Item7 Ref="234" ControlType="XRLabel" Name="xrLabel29" Text="xrLabel12" TextAlignment="TopRight" SizeF="58.71967,23.00001" LocationFloat="355.3923,94.00002" Font="Arial, 9.75pt" Padding="2,2,0,0,100">
+                          <DataBindings>
+                            <Item1 Ref="235" PropertyName="Text" DataMember="Payrolls.Employees.AnnualPenaltyRate.SundayHourString" />
+                          </DataBindings>
+                          <StylePriority Ref="236" UseFont="false" UseTextAlignment="false" />
+                        </Item7>
+                        <Item8 Ref="237" ControlType="XRLabel" Name="xrLabel12" Text="xrLabel12" TextAlignment="TopRight" SizeF="58.71872,25.0832" LocationFloat="355.3931,68.91679" Font="Arial, 9.75pt" Padding="2,2,0,0,100">
+                          <DataBindings>
+                            <Item1 Ref="238" PropertyName="Text" DataMember="Payrolls.Employees.AnnualPenaltyRate.SaturdayHourString" />
+                          </DataBindings>
+                          <StylePriority Ref="239" UseFont="false" UseTextAlignment="false" />
+                        </Item8>
+                        <Item9 Ref="240" ControlType="XRLabel" Name="xrLabel32" Text="xrLabel32" TextAlignment="TopRight" SizeF="58.71716,23" LocationFloat="355.3932,0" Font="Arial, 9.75pt" BackColor="Lavender" Padding="2,2,0,0,100" Borders="Top">
+                          <DataBindings>
+                            <Item1 Ref="241" PropertyName="Text" DataMember="Payrolls.Employees.TotalTimeSheetHourString" />
+                          </DataBindings>
+                          <StylePriority Ref="242" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                        </Item9>
+                        <Item10 Ref="243" ControlType="XRLabel" Name="xrLabel9" Text="Total timesheet hours" TextAlignment="TopLeft" SizeF="194.3615,23" LocationFloat="0,0" Font="Arial, 9.75pt, charSet=0" BackColor="Lavender" Padding="2,2,0,0,100">
+                          <StylePriority Ref="244" UseBackColor="false" UseTextAlignment="false" />
+                        </Item10>
+                        <Item11 Ref="245" ControlType="XRLabel" Name="xrLabel13" Text="Over Time threshold" TextAlignment="TopLeft" SizeF="194.3615,23.00002" LocationFloat="0.0003901395,22.99998" Font="Arial, 9.75pt, charSet=0" BackColor="Lavender" Padding="2,2,0,0,100">
+                          <StylePriority Ref="246" UseBackColor="false" UseTextAlignment="false" />
+                        </Item11>
+                        <Item12 Ref="247" ControlType="XRLabel" Name="xrLabel25" Text="Penalty Rates" TextAlignment="TopLeft" SizeF="127.6475,18.91664" LocationFloat="227.7414,223.9998" Font="Arial, 9.75pt, style=Bold, charSet=0" BackColor="Lavender" Padding="2,2,0,0,100">
+                          <StylePriority Ref="248" UseBackColor="false" UseBorders="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+                        </Item12>
+                        <Item13 Ref="249" ControlType="XRLabel" Name="xrLabel21" Text="Additional Penalty Hrs" TextAlignment="TopLeft" SizeF="194.3615,20.99995" LocationFloat="0,202.9999" Font="Arial, 9.75pt, style=Bold, charSet=0" BackColor="Lavender" Padding="2,2,0,0,100">
+                          <StylePriority Ref="250" UseBackColor="false" UseTextAlignment="false" />
+                        </Item13>
+                        <Item14 Ref="251" ControlType="XRLabel" Name="xrLabel20" Text="Penalty Threshold" TextAlignment="TopLeft" SizeF="194.3615,20.99997" LocationFloat="0.0003394434,181.9999" Font="Arial, 9.75pt, charSet=0" BackColor="Lavender" Padding="2,2,0,0,100">
+                          <StylePriority Ref="252" UseBackColor="false" UseTextAlignment="false" />
+                        </Item14>
+                        <Item15 Ref="253" ControlType="XRLabel" Name="xrLabel19" Text="Total" TextAlignment="TopLeft" SizeF="194.3615,20.99998" LocationFloat="0.0004275092,160.9999" Font="Arial, 9.75pt, charSet=0" BackColor="Lavender" Padding="2,2,0,0,100">
+                          <StylePriority Ref="254" UseBackColor="false" UseTextAlignment="false" />
+                        </Item15>
+                        <Item16 Ref="255" ControlType="XRLabel" Name="xrLabel18" Text="&lt;&gt; 7am to 7pm" TextAlignment="TopLeft" SizeF="194.3615,20.99995" LocationFloat="0,140" Font="Arial, 9.75pt, charSet=0" BackColor="Lavender" Padding="2,2,0,0,100">
+                          <StylePriority Ref="256" UseBackColor="false" UseTextAlignment="false" />
+                        </Item16>
+                        <Item17 Ref="257" ControlType="XRLabel" Name="xrLabel17" Text="Sunday hrs" TextAlignment="TopLeft" SizeF="194.3615,23" LocationFloat="0,117" Font="Arial, 9.75pt, charSet=0" BackColor="Lavender" Padding="2,2,0,0,100">
+                          <StylePriority Ref="258" UseBackColor="false" UseTextAlignment="false" />
+                        </Item17>
+                        <Item18 Ref="259" ControlType="XRLabel" Name="xrLabel16" Text="Saturday hrs" TextAlignment="TopLeft" SizeF="194.3615,23" LocationFloat="0,93.99998" Font="Arial, 9.75pt, charSet=0" BackColor="Lavender" Padding="2,2,0,0,100">
+                          <StylePriority Ref="260" UseBackColor="false" UseTextAlignment="false" />
+                        </Item18>
+                        <Item19 Ref="261" ControlType="XRLabel" Name="xrLabel15" Text="Penalty rate check" TextAlignment="TopLeft" SizeF="194.3615,25.08322" LocationFloat="0,68.9168" Font="Arial, 9.75pt, style=Bold, charSet=0" BackColor="Lavender" Padding="2,2,0,0,100">
+                          <StylePriority Ref="262" UseBackColor="false" UseTextAlignment="false" />
+                        </Item19>
+                        <Item20 Ref="263" ControlType="XRLabel" Name="xrLabel14" Text="Additional Over Time Hrs" TextAlignment="TopLeft" SizeF="194.3615,22.91679" LocationFloat="0.0003901395,46" Font="Arial, 9.75pt, style=Bold, charSet=0" BackColor="Lavender" Padding="2,2,0,0,100">
+                          <StylePriority Ref="264" UseBackColor="false" UseTextAlignment="false" />
+                        </Item20>
+                      </Controls>
+                      <StylePriority Ref="265" UseBackColor="false" />
+                    </Item15>
+                  </Controls>
+                  <StylePriority Ref="266" UseBorderWidth="false" />
+                </Item3>
+              </Bands>
+            </Item2>
+          </Bands>
+        </Item2>
+      </Bands>
+    </Item1>
+    <Item2 Ref="267" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="29.62691" />
+    <Item3 Ref="268" ControlType="DetailBand" Name="detailBand1" HeightF="42.77836">
+      <Controls>
+        <Item1 Ref="269" ControlType="XRLabel" Name="xrLabel7" Multiline="true" Text="Difference Calc&#xD;&#xA;" WordWrap="false" SizeF="102.0832,18.83332" LocationFloat="979.9168,1.525879E-05" Font="Arial, 9.75pt, style=Bold, charSet=0" BackColor="Cornsilk" Padding="2,2,0,0,100">
+          <StylePriority Ref="270" UseBackColor="false" />
+        </Item1>
+        <Item2 Ref="271" ControlType="XRLabel" Name="xrLabel27" Text="Roster / Standard hours" WordWrap="false" SizeF="166.6673,18.83332" LocationFloat="780.4028,1.525879E-05" Font="Arial, 9.75pt, style=Bold, charSet=0" BackColor="PeachPuff" Padding="2,2,0,0,100">
+          <StylePriority Ref="272" UseBackColor="false" />
+        </Item2>
+        <Item3 Ref="273" ControlType="XRLabel" Name="xrLabel28" Text="Timesheets" TextAlignment="TopCenter" SizeF="414.1102,29.24998" LocationFloat="335.5887,1.525879E-05" Font="Arial, 9.75pt, style=Bold, charSet=0" BackColor="Lavender" Padding="2,2,0,0,100">
+          <StylePriority Ref="274" UseBackColor="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="275" ControlType="XRPanel" Name="xrPanel16" SizeF="414.1114,13.52835" LocationFloat="335.5869,29.25001" BackColor="Lavender" BorderDashStyle="Solid">
+          <StylePriority Ref="276" UseBackColor="false" UseBorderDashStyle="false" />
+        </Item4>
+        <Item5 Ref="277" ControlType="XRPanel" Name="xrPanel15" SizeF="166.6673,23.88822" LocationFloat="780.4028,18.89014" BackColor="PeachPuff">
+          <StylePriority Ref="278" UseBackColor="false" />
+        </Item5>
+        <Item6 Ref="279" ControlType="XRPanel" Name="xrPanel14" SizeF="102.0832,23.88822" LocationFloat="979.8613,18.89014" BackColor="Cornsilk">
+          <StylePriority Ref="280" UseBackColor="false" />
+        </Item6>
+        <Item7 Ref="281" ControlType="XRLabel" Name="xrLabel10" Text="Annualised Salary Reconciliation Report" SizeF="310.4619,29.25" LocationFloat="9.999974,0" Font="Arial, 11pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="282" UseFont="false" />
+        </Item7>
+      </Controls>
+    </Item3>
+    <Item4 Ref="283" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="0" />
+  </Bands>
+</XtraReportsLayoutSerializer>

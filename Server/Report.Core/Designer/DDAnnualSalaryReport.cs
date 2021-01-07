@@ -1,9 +1,9 @@
 
 namespace Report.Core.Designer
 {
-    public partial class DDEmployeeReport
+    public partial class DDAnnualSalaryReport
     {
-        public DDEmployeeReport()
+        public DDAnnualSalaryReport()
         {
             InitializeComponent();
         }
