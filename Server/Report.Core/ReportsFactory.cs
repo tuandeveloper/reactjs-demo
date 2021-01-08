@@ -34,7 +34,7 @@ namespace Report.Core
 
             //NameValueCollection can't deserialize
             //Convert to dictionary
-            var dictionary = param.AllKeys.ToDictionary(k => k, k => param[k]);
+            var dictionary = param != null ? param.AllKeys.ToDictionary(k => k, k => param[k]) : default(Dictionary<string, string>);
             var parameter = new Parameter("parameter", typeof(Dictionary<string, string>), dictionary);
             dataSource.Constructor = new ObjectConstructorInfo(parameter);
             return dataSource;
