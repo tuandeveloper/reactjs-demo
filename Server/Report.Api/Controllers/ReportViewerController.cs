@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Report.Api.Controllers
 {
-    [Route("ReportViewer")]
+    //Default route name
+    //Warning, some function maybe not work while changing name. Such as: export, print...
+    [Route("DXXRDV")]
     [Authorize]
     public class ReportViewerController : WebDocumentViewerController
     {

@@ -1,5 +1,6 @@
 import React from "react";
 import ko from "knockout";
+import { JSReportViewer } from "devexpress-reporting/dx-webdocumentviewer";
 import { PreviewElements } from "devexpress-reporting/scopes/reporting-viewer";
 import { getTokenRedirect } from "../authentication/authRedirect";
 import { TOKEN_REQUEST } from "../authentication/authConfig";
@@ -11,7 +12,7 @@ export class ReportViewer extends React.Component {
     this.reportUrl = ko.observable(props.ReportName);
     this.reportRef = React.createRef();
     this.search = this.search.bind(this);
-    this.state = { personName: "" };
+    this.state = { value: "" };
 
     this.handleChange = this.handleChange.bind(this);
 
@@ -19,7 +20,7 @@ export class ReportViewer extends React.Component {
     //https://docs.devexpress.com/XtraReports/118985/web-reporting/javascript-reporting/knockout/document-viewer/document-viewer-client-side-configuration-knockout
     this.requestOptions = {
       host: "http://localhost:5000/",
-      invokeAction: "ReportViewer",
+      invokeAction: "DXXRDV",
     };
 
     //Event builder
@@ -43,14 +44,14 @@ export class ReportViewer extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({ personName: event.target.value });
+    this.setState({ value: event.target.value });
   }
 
   search(ref) {
     ko.cleanNode(ref);
     ko.applyBindings(
       {
-        reportUrl: `${this.props.ReportName}?personName=${this.state.personName}`,
+        reportUrl: `${this.props.ReportName}?personName=${this.state.value}`,
         requestOptions: this.requestOptions,
         callbacks: this.callbacks,
       },
@@ -65,11 +66,11 @@ export class ReportViewer extends React.Component {
           className="container"
           style={{ display: this.props.showSearchPanel ? "block" : "none" }}
         >
-          <div class="row">
+          <div className="row">
             <input
               type="text"
               placeholder="PersonName"
-              value={this.state.personName}
+              value={this.state.value}
               onChange={this.handleChange}
             />
 
