@@ -2,23 +2,43 @@
 using DevExpress.AspNetCore.Reporting.WebDocumentViewer.Native.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Report.Core;
 using System.Threading.Tasks;
 
 namespace Report.Api.Controllers
 {
-    //Default route name
-    //Warning, some function maybe not work while changing name. Such as: export, print...
-    [Route("DXXRDV")]
-    [Authorize]
+    [Route("ReportViewer")]
     public class ReportViewerController : WebDocumentViewerController
     {
-        public ReportViewerController(IWebDocumentViewerMvcControllerService controllerService) : base(controllerService)
+        private IExportResultProvider _documentExportService;
+
+        public ReportViewerController(IWebDocumentViewerMvcControllerService controllerService, IExportResultProvider documentExportService) : base(controllerService)
         {
+            _documentExportService = documentExportService;
         }
 
+        [Authorize]
         public override Task<IActionResult> Invoke()
         {
             return base.Invoke();
+        }
+
+        [AllowAnonymous]
+        [Route("GetExportResult")]
+        public ActionResult GetExportResult(string token, string fileName)
+        {
+            ExportResult exportResult;
+            if (!_documentExportService.TryGetExportResult(token, out exportResult))
+            {
+                return NotFound("Exported document was not found. Try to export the document once again.");
+            }
+            var fileResult = File(exportResult.GetBytes(), exportResult.ContentType);
+            if (exportResult.ContentDisposition != System.Net.Mime.DispositionTypeNames.Inline)
+            {
+                fileResult.FileDownloadName = exportResult.FileName;
+            }
+
+            return fileResult;
         }
     }
 }

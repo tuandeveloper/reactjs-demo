@@ -1,7 +1,8 @@
 import React from "react";
 import ko from "knockout";
-import { JSReportViewer } from "devexpress-reporting/dx-webdocumentviewer";
+import "devexpress-reporting/dx-webdocumentviewer";
 import { PreviewElements } from "devexpress-reporting/scopes/reporting-viewer";
+import { AsyncExportApproach } from "devexpress-reporting/scopes/reporting-viewer-settings";
 import { getTokenRedirect } from "../authentication/authRedirect";
 import { TOKEN_REQUEST } from "../authentication/authConfig";
 import { ajaxSetup } from "@devexpress/analytics-core/analytics-utils";
@@ -16,11 +17,14 @@ export class ReportViewer extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
 
+    //https://supportcenter.devexpress.com/ticket/details/t714576/adding-authentication-to-the-html5-report-viewer-component-asp-net-core-angular
+    AsyncExportApproach(true);
+
     //Request option
     //https://docs.devexpress.com/XtraReports/118985/web-reporting/javascript-reporting/knockout/document-viewer/document-viewer-client-side-configuration-knockout
     this.requestOptions = {
       host: "http://localhost:5000/",
-      invokeAction: "DXXRDV",
+      invokeAction: "ReportViewer",
     };
 
     //Event builder
