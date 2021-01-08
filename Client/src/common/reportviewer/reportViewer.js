@@ -1,6 +1,5 @@
 import React from "react";
 import ko from "knockout";
-import { JSReportViewer } from "devexpress-reporting/dx-webdocumentviewer";
 import { PreviewElements } from "devexpress-reporting/scopes/reporting-viewer";
 import { getTokenRedirect } from "../authentication/authRedirect";
 import { TOKEN_REQUEST } from "../authentication/authConfig";
@@ -32,7 +31,7 @@ export class ReportViewer extends React.Component {
         e.Elements.splice(index, 1);
       },
       OnServerError: function (s, e) {
-        console.log("Error", s);
+        console.log("Error", e);
       },
       CustomizeLocalization: function (s, e) {
         s.UpdateLocalization({
