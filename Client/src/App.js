@@ -20,7 +20,10 @@ function App(props) {
             <Route path="/" exact component={Home} />
             <Route path="/home" component={Home} />
             <Route path="/employees" key="1">
-              <ReportViewer ReportName="EmployeeReport" />
+              <ReportViewer
+                ReportName="EmployeeReport"
+                showSearchPanel="true"
+              />
             </Route>
             <Route path="/annualsalary" key="2">
               <ReportViewer ReportName="AnnualSalaryReport" />

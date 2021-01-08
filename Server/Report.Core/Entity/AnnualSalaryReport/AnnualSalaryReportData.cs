@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 
 namespace Report.Core.Entity
 {
@@ -19,7 +20,7 @@ namespace Report.Core.Entity
         /// <param name="employeeID"></param>
         /// <param name="costCentreId"></param>
         /// <param name="payrollId"></param>
-        public AnnualSalaryReportData()
+        public AnnualSalaryReportData(Dictionary<string, string> parameter)
         {
             var employees = new List<AnnualSalaryEmployee>
             {

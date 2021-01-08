@@ -46,7 +46,7 @@ namespace Report.Core
                 {
                     using (MemoryStream ms = new MemoryStream())
                     {
-                        ReportsFactory.Reports[reportName]().SaveLayoutToXml(ms);
+                        ReportsFactory.Reports[reportName](requestParam).SaveLayoutToXml(ms);
                         return ms.ToArray();
                     }
                 }

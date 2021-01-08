@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Linq;
 
 namespace Report.Core.Entity
 {
@@ -9,7 +11,20 @@ namespace Report.Core.Entity
         {
             Items = InitializeList();
         }
-      
+
+        public EmployeeList(Dictionary<string, string> parameter)
+        {
+            Items = InitializeList();
+            if (parameter != null)
+            {
+                var personName = parameter["personName"];
+                if (!string.IsNullOrWhiteSpace(personName))
+                {
+                    Items = Items.Where(t => t.PersonName.ToUpper().Contains(personName.ToUpper())).ToList();
+                }
+            }
+        }
+
         public List<DataItem> Items { get; set; }
 
         public List<DataItem> InitializeList()
@@ -18,7 +33,7 @@ namespace Report.Core.Entity
                new DataItem(1, 101, "Andrew Fuller", "Dr.", "Vice President, Sales"),
                new DataItem(1, 102, "Anne Dodsworth", "Ms.", "Sales Representative"),
                new DataItem(1, 103, "Michael Suyama", "Mr.", "Sales Representative"),
-               new DataItem(1, 104, "Janet Leverling", "Ms.", "Sales Representative"),
+               new DataItem(1, 104, "Jyanet Leverling", "Ms.", "Sales Representative"),
                new DataItem(1, 105, "Elliot Komaroff", "Dr.", "Sales Coordinator"),
                new DataItem(2, 201, "Nancy Davolio", "Ms.", "Sales Representative"),
                new DataItem(2, 202, "Steven Buchanan", "Mr.", "Sales Manager"),

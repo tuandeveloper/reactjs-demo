@@ -1,6 +1,6 @@
 import React from "react";
 import ko from "knockout";
-import "devexpress-reporting/dx-webdocumentviewer";
+import { JSReportViewer } from "devexpress-reporting/dx-webdocumentviewer";
 import { PreviewElements } from "devexpress-reporting/scopes/reporting-viewer";
 import { getTokenRedirect } from "../authentication/authRedirect";
 import { TOKEN_REQUEST } from "../authentication/authConfig";
@@ -10,6 +10,11 @@ export class ReportViewer extends React.Component {
   constructor(props) {
     super(props);
     this.reportUrl = ko.observable(props.ReportName);
+    this.reportRef = React.createRef();
+    this.search = this.search.bind(this);
+    this.state = { personName: "" };
+
+    this.handleChange = this.handleChange.bind(this);
 
     //Request option
     //https://docs.devexpress.com/XtraReports/118985/web-reporting/javascript-reporting/knockout/document-viewer/document-viewer-client-side-configuration-knockout
@@ -38,11 +43,46 @@ export class ReportViewer extends React.Component {
     };
   }
 
+  handleChange(event) {
+    this.setState({ personName: event.target.value });
+  }
+
+  search(ref) {
+    ko.cleanNode(ref);
+    ko.applyBindings(
+      {
+        reportUrl: `${this.props.ReportName}?personName=${this.state.personName}`,
+        requestOptions: this.requestOptions,
+        callbacks: this.callbacks,
+      },
+      this.reportRef.current
+    );
+  }
+
   render() {
     return (
-      <div style={{ width: "100%", height: "700px" }}>
-        <div ref="viewer" data-bind="dxReportViewer: $data" />
-      </div>
+      <React.Fragment>
+        <div
+          className="container"
+          style={{ display: this.props.showSearchPanel ? "block" : "none" }}
+        >
+          <div class="row">
+            <input
+              type="text"
+              placeholder="PersonName"
+              value={this.state.personName}
+              onChange={this.handleChange}
+            />
+
+            <button onClick={() => this.search(this.reportRef.current)}>
+              Search
+            </button>
+          </div>
+        </div>
+        <div style={{ width: "100%", height: "700px" }}>
+          <div ref={this.reportRef} data-bind="dxReportViewer: $data" />
+        </div>
+      </React.Fragment>
     );
   }
 
@@ -60,9 +100,8 @@ export class ReportViewer extends React.Component {
             reportUrl: this.reportUrl,
             requestOptions: this.requestOptions,
             callbacks: this.callbacks,
-            remoteSettings: this.remoteSettings,
           },
-          this.refs.viewer
+          this.reportRef.current
         );
       })
       .catch((error) => {
@@ -71,6 +110,6 @@ export class ReportViewer extends React.Component {
   }
 
   componentWillUnmount() {
-    ko.cleanNode(this.refs.viewer);
+    ko.cleanNode(this.reportRef.current);
   }
 }
