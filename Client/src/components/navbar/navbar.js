@@ -16,41 +16,28 @@ export function Navbar() {
   return (
     <>
       <nav className="navbar-item">
-        <h1 className="navbar-logo">Epayroll</h1>
+        <h1 className="navbar-logo">
+          <Link className="nav-links" to='/'>Epayroll</Link>
+        </h1>
         <div className="menu-icon" onClick={handleClick}>
           <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
         </div>
         <ul className={clicked ? "nav-menu active" : "nav-menu"}>
-          {false && MenuItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <Link to={item.url} className={item.className}>
-                  {item.title}
-                </Link>
-              </li>
-            );
-          })}
+          {isAuthenticated && 
+            MenuItems.map((item, index) => {
+              return (
+                <li key={index}>
+                  <Link to={item.url} className={item.className}>
+                    {item.title}
+                  </Link>
+                </li>
+              );
+            })
+          }
           {isAuthenticated &&
-            <>
-              <li>
-                <Link to='/employees' className='nav-links'>
-                  Employees
-                </Link>
-              </li>
-              <li>
-                <Link to='/annualsalary' className='nav-links'>
-                  Annual salary
-                </Link>
-              </li>
-              <li>
-                <Link to='/counter' className='nav-links'>
-                  Counter
-                </Link>
-              </li>
-              <li>
-                <a className='nav-links' href="#/" onClick={signOut}>Sign Out</a>
-              </li>
-            </>
+          <li>
+            <a className='nav-links' href="#/" onClick={signOut}>Sign Out</a>
+          </li>
           }
           {!isAuthenticated &&
             <li>
