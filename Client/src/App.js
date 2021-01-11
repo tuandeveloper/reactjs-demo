@@ -8,7 +8,9 @@ import "@devexpress/analytics-core/dist/css/dx-analytics.common.css";
 import "@devexpress/analytics-core/dist/css/dx-analytics.light.compact.css";
 import "devexpress-reporting/dist/css/dx-webdocumentviewer.css";
 import "jquery-ui/themes/base/all.css";
-import { ReportViewer } from "./common/reportviewer/reportViewer";
+import { Counter } from "./pages/Counter";
+import { EmployeeReport } from "./pages/EmployeeReport";
+import { AnnualSalaryReport } from "./pages/AnnualSalaryReport";
 
 function App(props) {
   return (
@@ -19,15 +21,9 @@ function App(props) {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/home" component={Home} />
-            <Route path="/employees" key="1">
-              <ReportViewer
-                ReportName="EmployeeReport"
-                showSearchPanel="true"
-              />
-            </Route>
-            <Route path="/annualsalary" key="2">
-              <ReportViewer ReportName="AnnualSalaryReport" />
-            </Route>
+            <Route path="/employees" component={EmployeeReport} />
+            <Route path="/annualsalary" component={AnnualSalaryReport} />
+            <Route path="/counter" component={Counter} />
           </Switch>
         </div>
       </Router>

@@ -7,6 +7,7 @@ import { getTokenRedirect } from "../authentication/authRedirect";
 import { TOKEN_REQUEST } from "../authentication/authConfig";
 import { ajaxSetup } from "@devexpress/analytics-core/analytics-utils";
 import "./reportViewer.css";
+
 export class ReportViewer extends React.Component {
   constructor(props) {
     super(props);
@@ -92,25 +93,25 @@ export class ReportViewer extends React.Component {
 
   componentDidMount() {
     getTokenRedirect(TOKEN_REQUEST)
-      .then((response) => {
-        if (response) {
-          ajaxSetup.ajaxSettings = {
-            headers: { Authorization: "Bearer " + response.accessToken },
-          };
-        }
+    .then((response) => {
+      if (response) {
+        ajaxSetup.ajaxSettings = {
+          headers: { Authorization: "Bearer " + response.accessToken },
+        };
+      }
 
-        ko.applyBindings(
-          {
-            reportUrl: this.reportUrl,
-            requestOptions: this.requestOptions,
-            callbacks: this.callbacks,
-          },
-          this.reportRef.current
-        );
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+      ko.applyBindings(
+        {
+          reportUrl: this.reportUrl,
+          requestOptions: this.requestOptions,
+          callbacks: this.callbacks,
+        },
+        this.reportRef.current
+      );
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   }
 
   componentWillUnmount() {

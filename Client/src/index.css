@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.jumpbotron {
+  padding: 20px;
+  text-align: center;
+  background: rgba(180, 180, 180, 0.3);
+  min-height: 100px;
+  line-height: 100px;
+}

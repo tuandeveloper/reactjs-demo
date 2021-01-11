@@ -8,14 +8,12 @@ import * as msal from "@azure/msal-browser";
 export const MSAL_CONFIG = {
   auth: {
     clientId: "fb16db61-6486-488b-bdcc-152d057f0b10",
-    authority:
-      "https://login.microsoftonline.com/cad5b6a5-080f-4b24-b122-3d53f8627b04",
-    redirectUri: "http://localhost:3000",
-    navigateToLoginRequestUrl: true,
+    authority: "https://login.microsoftonline.com/cad5b6a5-080f-4b24-b122-3d53f8627b04",
+    redirectUri: "http://localhost:3000"
   },
   cache: {
-    cacheLocation: "sessionStorage", // This configures where your cache will be stored
-    storeAuthStateInCookie: false, // Set this to "true" if you are having issues on IE11 or Edge
+    cacheLocation: "localStorage", // This configures where your cache will be stored
+    storeAuthStateInCookie: true, // Set this to "true" if you are having issues on IE11 or Edge
   },
   system: {
     loggerOptions: {
@@ -36,6 +34,8 @@ export const MSAL_CONFIG = {
           case msal.LogLevel.Warning:
             console.warn(message);
             return;
+          default:
+            console.log(message);
         }
       },
     },
@@ -51,6 +51,7 @@ export const MSAL_CONFIG = {
 export const LOGIN_REQUEST = {
   scopes: [
     "openid",
+    "email",
     "profile",
     "offline_access",
     "api://728b07c2-ceba-402b-b41a-b3541196e0b5/Employees.ReadReport.All",
@@ -65,8 +66,13 @@ export const TOKEN_REQUEST = {
   scopes: [
     "openid",
     "profile",
+    "email",
     "offline_access",
     "api://728b07c2-ceba-402b-b41a-b3541196e0b5/Employees.ReadReport.All",
   ],
   forceRefresh: false, // Set this to "true" to skip a cached token and go to the server to get a new token
 };
+
+// Create the main myMSALObj instance
+// configuration parameters are located at authConfig.js
+export const CLIENT_APPLICATION = new msal.PublicClientApplication(MSAL_CONFIG);

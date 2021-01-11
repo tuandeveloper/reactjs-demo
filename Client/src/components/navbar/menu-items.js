@@ -13,5 +13,5 @@ export const MenuItems = [
     title: "Annual salary",
     url: "/annualsalary",
     className: "nav-links",
-  },
+  }
 ];

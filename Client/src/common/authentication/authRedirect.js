@@ -1,12 +1,12 @@
 import * as msal from "@azure/msal-browser";
-import {MSAL_CONFIG, LOGIN_REQUEST, TOKEN_REQUEST} from './authConfig';
+import {CLIENT_APPLICATION, LOGIN_REQUEST, TOKEN_REQUEST} from './authConfig';
 import { callMSGraph } from './graph';
 import { GRAPH_CONFIG } from './graphConfig';
 import {REPORT_API} from '../appConfig';
 
 // Create the main myMSALObj instance
 // configuration parameters are located at authConfig.js
-const myMSALObj = new msal.PublicClientApplication(MSAL_CONFIG);
+const myMSALObj = CLIENT_APPLICATION;
 
 let username = "";
 
@@ -15,11 +15,11 @@ let username = "";
  * response returned from redirect flow. For more information, visit:
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/acquire-token.md
  */
-myMSALObj.handleRedirectPromise()
-    .then(handleResponse)
-    .catch((error) => {
-        console.error(error);
-    });
+// myMSALObj.handleRedirectPromise()
+//     .then(handleResponse)
+//     .catch((error) => {
+//         console.error(error);
+//     });
 
 export function selectAccount() {
 
@@ -80,7 +80,22 @@ export function getTokenRedirect(request) {
      * See here for more info on account retrieval: 
      * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/Accounts.md
      */
-    request.account = myMSALObj.getAccountByUsername(username);
+
+    if (username) {
+        request.account = myMSALObj.getAccountByUsername(username);
+    } else {
+        const currentAccounts = myMSALObj.getAllAccounts();
+        if (currentAccounts.length === 0) {
+            return;
+        } else if (currentAccounts.length > 1) {
+            // Add your account choosing logic here
+            console.warn("Multiple accounts detected.");
+        } else if (currentAccounts.length === 1) {
+            request.account = currentAccounts[0];
+            username = currentAccounts[0].username;
+            console.log(username);
+        }
+    }
 
     return myMSALObj.acquireTokenSilent(request)
         .catch(error => {

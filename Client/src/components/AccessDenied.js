@@ -1,0 +1,1 @@
+export const AccessDenied = () => <h4>You're not authrozied. Please login before access to this page.</h4>;
